@@ -1,0 +1,33 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Tra Tran"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about/about.qmd
+        text: About
+      - href: projects/projects.qmd
+        text: Project
+      - href: blog/publications.qmd
+        text: Blog
+    right:
+      - href: https://github.com/tranlevantra/personal_website
+        icon: github
+  page-footer:
+    center:
+      - text: "© 2025, Tra Tran"
+
+
+date-format: "D MMMM YYYY"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+editor: visual
+
