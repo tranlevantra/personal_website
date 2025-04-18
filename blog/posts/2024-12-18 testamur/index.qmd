@@ -1,0 +1,28 @@
+---
+title: "I photoshoped my Testamur"
+author: "Tra Tran"
+date: '2024-12-18'
+image: false
+
+slug: I-photoshoped-my-testamur
+categories:
+  - flexing
+tags:
+  - flexing
+---
+
+**Long story short**: the name on my testamur originally appeared as “Tran Le Van Tra” — a version adjusted to English naming conventions.
+
+But my parents don’t speak English, and my name might be the only thing they recognize on that piece of paper. So I photoshoped it — to Trần Lê Vân Trà.
+
+To honor them. For all the sacrifices they made so I could be here today.
+
+![*A little tribute to where I came from — and who I did this for.*](photoshoped_testamur.png){width="70%"}
+
+And… to flex a little, too 😌
+
+Some say "Masters is just delayed unemployment", but to me, it’s a privilege to study, to learn, and to grow.
+
+With a bachelor's degree in business and no prior training in advanced mathematics, the biggest achievement of these past two years has been learning math from the ground up and now, diving into advanced concepts in statistics with confidence.
+
+Yes, I’ve been nerdy. I’ve spent most of these two years studying. But that, too, is a kind of employment.

@@ -1,0 +1,32 @@
+---
+title: "Tra Tran"
+about:
+  template: trestles
+  image: figures/profile.jpg
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/tratran4499/
+    - icon: github
+      text: Github
+      href: https://github.com/tranlevantra
+---
+
+## 👋 Hello
+
+I’m **Trà** — originally from **Vietnam**, now living in **Australia**. Aside from */Chah/*, I also go by **Tea** or **April**.
+
+☕ *Tea* means *Trà* in Vietnamese,\
+🌼 *April* is my English name — chosen for my birth month, and because it just felt right.
+
+------------------------------------------------------------------------
+
+## 🎓 Education
+
+**RMIT University** — Melbourne, Australia\
+*Master of Statistics & Operations Research*\
+*March 2023 – December 2024*
+
+**RMIT University Vietnam** — Hanoi, Vietnam\
+*Bachelor of Logistics & Supply Chain Management*\
+*October 2017 – May 2022*

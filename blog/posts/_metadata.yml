@@ -1,0 +1,9 @@
+format:
+  html:
+    toc: true
+    toc-location: right
+    toc-title: "Table of Contents"
+    comments:
+      giscus:
+        repo: tranlevantra/personal_website
+

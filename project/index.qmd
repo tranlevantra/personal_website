@@ -1,0 +1,13 @@
+---
+title: "My Project Listings"
+subtitle: "Both Done and In Progress"
+listing:
+  contents: posts
+  type: grid
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [image, date, title, description]
+page-layout: full
+title-block-banner: true
+---

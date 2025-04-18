@@ -6,23 +6,20 @@ website:
   title: "Tra Tran"
   navbar:
     left:
-      - href: index.qmd
+      - href: home/index.qmd
         text: Home
-      - href: about/about.qmd
+      - href: about/index.qmd
         text: About
-      - href: projects/projects.qmd
+      - href: project/index.qmd
         text: Project
-      - href: blog/publications.qmd
+      - href: blog/index.qmd
         text: Blog
     right:
       - href: https://github.com/tranlevantra/personal_website
         icon: github
-  page-footer:
-    center:
-      - text: "© 2025, Tra Tran"
-
-
-date-format: "D MMMM YYYY"
+  
+  page-footer: 
+    center: This website is built with [Quarto](https://quarto.org/docs/websites/) and hosted on [Github Pages](https://pages.github.com)
 
 format:
   html:

@@ -1,0 +1,70 @@
+---
+title: ""
+toc: true
+---
+
+## 👋 Let's Get to Know Me Better!
+
+![](figures/Ha%20Giang.heic){width="95%"}
+
+> I was born and raised in **Northwestern Vietnam** — the mountainous region of quiet beauty and the most kind-hearted people.
+
+> *I like to do math, to cook, and to code.*\
+> (Yes, in that order.)
+
+------------------------------------------------------------------------
+
+## 🧠 MATH
+
+I’m a nerd — no doubt about it. But I have an explanation. Some people hit the gym to stay fit; I started solving math problems to keep my brain agile and sharp. And it’s funny — the more you do it, the more you *want* to do it. That’s how I ended up here.
+
+The kind of math I study is **statistics** — not pure math, but a mathematical science nonetheless. I feel incredibly grateful to study math at this level. And as cliché as it sounds: `the more I learn, the more I realize how little I actually know.`
+
+![💡 A key result in probability theory underpinning many important statistical applications that deserves more attention](figures/Laws%20of%20Total%20Expectation%20and%20Total%20Variance.gif){width="75%" height="500px" fig-align="center"}
+
+Because AI and machine learning are trending — and statistics is their backbone — here are some resources on *the math of data science* (tested and approved by a nerd 🤓):
+
+### 📐 Calculus
+
+-   Book: [*Calculus*](https://github.com/taivu312/books/tree/master/mathematics/calculus/stewart_calculus) by James Stewart
+-   Course: MIT OpenCourseWare
+    -   [Single Variable Calculus](https://ocw.mit.edu/courses/mathematics/18-01sc-single-variable-calculus-fall-2010/)\
+    -   [Multivariable Calculus](https://ocw.mit.edu/courses/mathematics/18-02sc-multivariable-calculus-fall-2010/)\
+-   A fun, intuitive approach: Khan Academy
+    -   [Integral Calculus](https://www.khanacademy.org/math/integral-calculus)\
+    -   [Differential Calculus](https://www.khanacademy.org/math/differential-calculus)\
+    -   [Multivariable Calculus](https://www.khanacademy.org/math/multivariable-calculus)
+
+### 📊 Linear Algebra
+
+-   Book: [*Linear Algebra with Applications*](https://valpont.s3.amazonaws.com/uploads/20151219190836/Linear-Algebra-with-Applications.pdf) by Steven J. Leon
+-   Course: [MIT OCW 18.06 Linear Algebra](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/)\
+-   Visual & intuitive: [*Math for Game Devs*](https://www.youtube.com/playlist?list=PLImQaTpSAdsArRFFj8bIfqMk2X7Vlf3XF) by Freya Holmer — she’s so cute, love her 😍
+
+### 📈 Mathematical Statistics
+
+I absolutely adore 📘 [*Statistical Inference*](https://pages.stat.wisc.edu/~shao/stat610/Casella_Berger_Statistical_Inference.pdf) by Casella and Berger, and I've set my sights next on 📗 [*Probability and Measure*](https://www.colorado.edu/amath/sites/default/files/attached-files/billingsley.pdf) by Patrick Billingsley next.
+
+*Attached links are free content available on the internet. But if you want to support the authors, please consider buying the books!😉*
+
+------------------------------------------------------------------------
+
+## 🍜 COOKING
+
+My cooking journey began a long time ago. My parents work incredibly hard to provide for us, and as the oldest sister, I naturally found myself in the kitchen early on.
+
+Things really leveled up when I moved to Australia — I began cooking *exquisite Vietnamese dishes* to share my culture with new friends, soothe my homesickness, and explore cuisines from around the world.
+
+My [inspiration](https://vnexpress.net/doi-song/cooking/thuc-don)? This lovely collection from VnExpress. It’s in Vietnamese, but three things transcend all language barriers — love, music, and yes... food! ❤️🎶🍲
+
+------------------------------------------------------------------------
+
+## 💻 CODING
+
+I’m still new to coding — and feel so lucky that auto-completion, Copilot, and ChatGPT were already around when I began.
+
+My favorite language so far is **Java** — it’s declarative, easy to read, and has just the right amount of strictness to catch bugs early. But the language I’m most fluent in is **R**, because I study Statistics — and R was developed *by statisticians, for statisticians* 📈.
+
+Arguing about which programming language is "better" feels a bit pointless to me. Languages are tools, and each serves a different purpose. What matters is what you build with them.
+
+I do wish I’d taken **Data Structures and Algorithms** in school — It's all good, there’s an abundance of amazing online resources now. 📚💻

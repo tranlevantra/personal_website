@@ -1,0 +1,132 @@
+---
+title: "On model performance assessment in binary classification tasks"
+author: "Tra Tran"
+date: '2024-12-11'
+url: "https://tranlevantra.github.io/blogs/#sensitivity-analysis"
+description: "A reflection on the often-neglected aspects of model performance assessment in binary classification tasks"
+image: figures/threshold_animation.gif
+
+slug: on-model-performance-assessment-in-binary-classification-tasks
+categories:
+  - machine learning
+  - data visualisation
+  - ggplot2
+tags:
+  - machine learning
+  - data visualisation
+  - ggplot2
+  - binary classification
+  - model performance assessment
+  - decision threshold
+  - ROC AUC
+  - calibration metrics
+  - reliability plot
+---
+
+*Thank you, [Asma Ali](https://www.linkedin.com/in/asma-asim-ali/) and [Thomas Bui](https://www.linkedin.com/in/thomas-bui-9142561b7?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8FRPTrJTQvCPpotNfIaURA%3D%3D) for your insightful feedback*
+
+## Before We Start
+
+This article is aimed at those with some background in Machine Learning as it assumes the reader is familiar with the concepts of binary classification, model training, and evaluation metrics. Some refreshment is provided below.
+
+::: {.callout-note collapse="true" title="Quick Refresher: Model Performance Assessment in Binary Classification Tasks"}
+Binary classification is a supervised learning task where the goal is to classify observations into one of two classes (0 or 1). For instance, in a medical diagnosis task, the model is trained to predict whether a patient has a disease (1) or not (0).
+
+There are two types of training algorithms for binary classification:
+
+-   **Probability based algorithms** (logistic regression, support vector machines with a sigmoid kernel, neural networks with a sigmoid activation function, etc.) which output probability - a value between 0 and 1 indicating the likelihood of an observation belonging to the positive class (1)
+
+-   And **Decision based algorithms** (tree-based algorithms, etc.) which output a class label directly.
+
+In reality, probability outputs are preferred because they provide more information about the uncertainty of the prediction. Nevertheless, decision based algorithms can output probabilities by using calibration methods when required.
+
+After training, the model is evaluated on a test dataset to assess its performance. The evaluation process typically involves converting the predicted probabilities into class labels using a decision threshold, and then calculating various performance metrics based on the confusion matrix.
+
+In details,
+
+**Decision Threshold**: is a value between 0 and 1 such that if the probability output is greater than or equal to the decision threshold, the observation is classified as the positive class (1); otherwise, it is classified as the negative class (0).
+
+**Confusion matrix**: is obtained by comparing the predicted class labels from the model with the actual class labels (0 or 1) in the test dataset. It shows the counts of:
+
+-   *True Positive (TP)*: The number of positive (1) instances correctly predicted as positive (1).
+
+-   *True Negative (TN)*: The number of negative (0) instances correctly predicted as negative (0).
+
+-   *False Positive (FP)*: The number of negative (0) instances incorrectly predicted as positive (1).
+
+-   *False Negative (FN)*: The number of positive (1) instances incorrectly predicted as negative (0).
+:::
+
+## Unpopular Opinions on Binary Classification Assessment
+
+-   **Calibration** is an often-neglected aspect when assessing the performance of classification models
+
+-   **Accuracy** is just one of many evaluation metrics — a high accuracy alone doesn’t guarantee good real-world performance, especially in imbalanced datasets.
+
+-   While **ROC curves** are helpful for sensitivity analysis and threshold selection, interpreting them isn’t always straightforward, particularly when misclassification costs are unequal.
+
+### Calibration metrics
+
+Calibration metrics in classification tasks evaluate how close the model's predicted probabilities are to the true class labels (0 or 1), indicating the model's reliability in estimating probabilities.
+
+For example, in healthcare applications, a well-calibrated model would assign probabilities that closely reflect the true likelihood of disease presence or absence.
+
+Some of the most common calibration metrics are:
+
+-   Brier Score: The mean squared difference between predicted probabilities and actual class labels
+
+$$1/n * Σ (P - o)^2$$
+
+-   Logarithmic Loss (Log Loss): The negative log-likelihood of the predicted probabilities given the actual class labels
+
+$$-1/n * Σ [o * log(P) + (1 - o) * log(1 - P)]$$
+
+-   RMS Calibration Error: The root mean squared difference between predicted probabilities and actual class labels
+
+$$sqrt(1/n * Σ (P - O)^2)$$
+
+While the above metrics are useful for evaluating a model’s overall calibration, they don’t reveal how the model performs on each class individually. That’s why visualising predicted probabilities against actual class labels — as done in a reliability diagram (example in Figure 1 below)— is essential for uncovering insights that metrics alone might miss.
+
+![Figure 1: The negative class (0) shows good calibration, with predicted probabilities tightly clustered around the actual class label. In contrast, the positive class (1) shows poorer calibration, with greater variability](figures/calibration.png){width="80%" alt-text=""}
+
+### Accuracy Metrics
+
+These metrics are calculated after converting predicted probabilities to class labels (0 or 1) using the decision threshold.
+
+-   Accuracy: $\frac{(TP + TN)}{(TP + TN + FP + FN)}$
+
+-   Sensitivity (True Positive Rate): $\frac{TP} {(TP + FN)}$
+
+-   Specificity (Positive Predictive Value): $\frac{TP} {TP + FP}$
+
+-   True Negative Rate (TNR): $\frac{TN} {TN + FP}$
+
+-   False Positive Rate (FPR): $\frac{FP}{FP + TN}$
+
+-   And many more ...
+
+These metrics give a fuller picture than accuracy alone, especially in imbalanced datasets where the number of instances in one class outweighs the other.
+
+For example, in a breast cancer classification test dataset with 90% of instances are those without cancer (class 0) and just 10% are with cancer (class 1), a model that predicts all people to be cancer-free would achieve an accuracy of 90%. However, this model would be useless as it fails to identify any cancer cases.
+
+![Figure 2: An example of model performance on test data at the commonly used threshold of 0.5. The model achieves 90% accuracy but fails to detect the single positive case.](figures/accuracy.png){width="80%" alt-text="Model performance at threshold 0.5 showing misclassification of the positive case"}
+
+### Sensitivity analysis
+
+**ROC Curve** plots the true positive rate (sensitivity) against the false positive rate (1 - specificity) at various thresholds to reveal how sensitive the model is to changes in the decision threshold for each class.
+
+![Figure 3: This ROC curve suggests the model performs poorly across most thresholds. It only identifies positives at very low thresholds, with a high false positive rate. Overall, the model struggles to separate the classes effectively](figures/auc.png){width="80%" alt-text=""}
+
+The optimal decision threshold is often chosen near the top-left corner of the ROC curve, where sensitivity and specificity are balanced. However, this assumes equal costs for false positives and false negatives — which is rarely the case.
+
+In breast cancer screening, for example, missing a cancer case (false negative) is more serious than flagging a healthy person (false positive). In such cases, the threshold is lowered to prioritize detecting positives, making ROC interpretation less straightforward.
+
+Figure 4 shows the same model as in Figure 3, with reliability diagram and a confusion matrix that updates with the threshold — making it easier to see how model's performance changes.
+
+![Figure 4: The reliability diagram shows that positive class accuracy metrics are highly sensitive to threshold changes due to the wider spread of predicted probabilities. In contrast, the negative class has tightly clustered probabilities near zero, making its metrics more stable.](figures/threshold_animation.gif){width="80%" alt-text=""}
+
+## Some Notes
+
+This article is not meant to be an exhaustive guide to model performance assessment in binary classification, but rather a reflection on often overlooked aspects — particularly the role of calibration metrics and sensitivity to decision thresholds.
+
+The idea of plotting predicted probabilities against actual class labels to create a reliability diagram stems from my own experimentation. All example visualisations in this article were created using [ggplot2](https://ggplot2.tidyverse.org).
