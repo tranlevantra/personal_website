@@ -73,17 +73,23 @@ For example, in healthcare applications, a well-calibrated model would assign pr
 
 Some of the most common calibration metrics are:
 
--   Brier Score: The mean squared difference between predicted probabilities and actual class labels
+- The mean squared difference between predicted probabilities and actual class labels.
 
-$$1/n * Σ (P - o)^2$$
+  $$
+  \text{Brier Score} = \frac{1}{n} \sum_{i=1}^{n} (P_i - o_i)^2
+  $$
 
--   Logarithmic Loss (Log Loss): The negative log-likelihood of the predicted probabilities given the actual class labels
+- The negative log-likelihood of the predicted probabilities given the actual class labels.
 
-$$-1/n * Σ [o * log(P) + (1 - o) * log(1 - P)]$$
+  $$
+  \text{Log Loss} = -\frac{1}{n} \sum_{i=1}^{n} \left[ o_i \log(P_i) + (1 - o_i) \log(1 - P_i) \right]
+  $$
 
--   RMS Calibration Error: The root mean squared difference between predicted probabilities and actual class labels
+- The root mean squared difference between predicted probabilities and actual class labels.
 
-$$sqrt(1/n * Σ (P - O)^2)$$
+  $$
+  \text{RMS Calibration Error} = \sqrt{ \frac{1}{n} \sum_{i=1}^{n} (P_i - o_i)^2 }
+  $$
 
 While the above metrics are useful for evaluating a model’s overall calibration, they don’t reveal how the model performs on each class individually. That’s why visualising predicted probabilities against actual class labels — as done in a reliability diagram (example in Figure 1 below)— is essential for uncovering insights that metrics alone might miss.
 
@@ -93,21 +99,25 @@ While the above metrics are useful for evaluating a model’s overall calibratio
 
 These metrics are calculated after converting predicted probabilities to class labels (0 or 1) using the decision threshold.
 
--   Accuracy: $\frac{(TP + TN)}{(TP + TN + FP + FN)}$
+- Accuracy: $\frac{TP + TN}{TP + TN + FP + FN}$
 
--   Sensitivity (True Positive Rate): $\frac{TP} {(TP + FN)}$
+- Sensitivity (True Positive Rate, Recall): $\frac{TP}{TP + FN}$
 
--   Specificity (Positive Predictive Value): $\frac{TP} {TP + FP}$
+- Specificity (True Negative Rate): $\frac{TN}{TN + FP}$
 
--   True Negative Rate (TNR): $\frac{TN} {TN + FP}$
+- Precision (Positive Predictive Value): $\frac{TP}{TP + FP}$
 
--   False Positive Rate (FPR): $\frac{FP}{FP + TN}$
+- False Positive Rate (FPR): $\frac{FP}{FP + TN}$
+
+- F1 Score: $2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}$
+
+- Balanced Accuracy: $\frac{\text{Sensitivity} + \text{Specificity}}{2}$
 
 -   And many more ...
 
 These metrics give a fuller picture than accuracy alone, especially in imbalanced datasets where the number of instances in one class outweighs the other.
 
-For example, in a breast cancer classification test dataset with 90% of instances are those without cancer (class 0) and just 10% are with cancer (class 1), a model that predicts all people to be cancer-free would achieve an accuracy of 90%. However, this model would be useless as it fails to identify any cancer cases.
+For example, in a breast cancer classification dataset where 90% of the instances are cancer-free (class 0) and only 10% have cancer (class 1), a model that predicts everyone to be cancer-free would still achieve 90% accuracy. However, such a model would be useless, as it fails to identify any actual cancer cases.
 
 ![Figure 2: An example of model performance on test data at the commonly used threshold of 0.5. The model achieves 90% accuracy but fails to detect the single positive case.](figures/accuracy.png){width="80%" alt-text="Model performance at threshold 0.5 showing misclassification of the positive case"}
 
@@ -123,10 +133,11 @@ In breast cancer screening, for example, missing a cancer case (false negative) 
 
 Figure 4 shows the same model as in Figure 3, with reliability diagram and a confusion matrix that updates with the threshold — making it easier to see how model's performance changes.
 
-![Figure 4: The reliability diagram shows that positive class accuracy metrics are highly sensitive to threshold changes due to the wider spread of predicted probabilities. In contrast, the negative class has tightly clustered probabilities near zero, making its metrics more stable.](figures/threshold_animation.gif){width="80%" alt-text=""}
+![Figure 4: From the reliability diagram, varying the threshold dynamically reveals how lowering it reduce false negatives while increase false positives. The confusion matrix further highlights how sensitive the two classes are to changes in threshold](figures/threshold_animation.gif){width="80%" alt-text=""}
+
 
 ## Some Notes
 
 This article is not meant to be an exhaustive guide to model performance assessment in binary classification, but rather a reflection on often overlooked aspects — particularly the role of calibration metrics and sensitivity to decision thresholds.
 
-The idea of plotting predicted probabilities against actual class labels to create a reliability diagram stems from my own experimentation. All example visualisations in this article were created using [ggplot2](https://ggplot2.tidyverse.org).
+The idea of plotting predicted probabilities against actual class labels to create a reliability diagram stems from my own experimentation. All example visualisations are created using R and the `ggplot2` package, plot data and code to create these figures are documented here 

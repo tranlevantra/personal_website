@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Tra Tran">
-<meta name="dcterms.date" content="2024-12-11">
-<meta name="description" content="A reflection on the often-neglected aspects of model performance assessment in binary classification tasks">
 
-<title>On model performance assessment in binary classification tasks – Tra Tran</title>
+<title>index – Tra Tran</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,40 +67,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -154,57 +122,20 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of Contents</h2>
-   
-  <ul>
-  <li><a href="#before-we-start" id="toc-before-we-start" class="nav-link active" data-scroll-target="#before-we-start">Before We Start</a></li>
-  <li><a href="#unpopular-opinions-on-binary-classification-assessment" id="toc-unpopular-opinions-on-binary-classification-assessment" class="nav-link" data-scroll-target="#unpopular-opinions-on-binary-classification-assessment">Unpopular Opinions on Binary Classification Assessment</a>
-  <ul class="collapse">
-  <li><a href="#calibration-metrics" id="toc-calibration-metrics" class="nav-link" data-scroll-target="#calibration-metrics">Calibration metrics</a></li>
-  <li><a href="#accuracy-metrics" id="toc-accuracy-metrics" class="nav-link" data-scroll-target="#accuracy-metrics">Accuracy Metrics</a></li>
-  <li><a href="#sensitivity-analysis" id="toc-sensitivity-analysis" class="nav-link" data-scroll-target="#sensitivity-analysis">Sensitivity analysis</a></li>
-  </ul></li>
-  <li><a href="#some-notes" id="toc-some-notes" class="nav-link" data-scroll-target="#some-notes">Some Notes</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">On model performance assessment in binary classification tasks</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">machine learning</div>
-    <div class="quarto-category">data visualisation</div>
-    <div class="quarto-category">ggplot2</div>
-  </div>
-  </div>
-
-<div>
-  <div class="description">
-    A reflection on the often-neglected aspects of model performance assessment in binary classification tasks
-  </div>
+<h1 class="title">index</h1>
 </div>
+
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Tra Tran </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">December 11, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -214,126 +145,8 @@ window.Quarto = {
 </header>
 
 
-<p><em>Thank you, <a href="https://www.linkedin.com/in/asma-asim-ali/">Asma Ali</a> and <a href="https://www.linkedin.com/in/thomas-bui-9142561b7?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8FRPTrJTQvCPpotNfIaURA%3D%3D">Thomas Bui</a> for your insightful feedback</em></p>
-<section id="before-we-start" class="level2">
-<h2 class="anchored" data-anchor-id="before-we-start">Before We Start</h2>
-<p>This article is aimed at those with some background in Machine Learning as it assumes the reader is familiar with the concepts of binary classification, model training, and evaluation metrics. Some refreshment is provided below.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Quick Refresher: Model Performance Assessment in Binary Classification Tasks">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Quick Refresher: Model Performance Assessment in Binary Classification Tasks
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Binary classification is a supervised learning task where the goal is to classify observations into one of two classes (0 or 1). For instance, in a medical diagnosis task, the model is trained to predict whether a patient has a disease (1) or not (0).</p>
-<p>There are two types of training algorithms for binary classification:</p>
-<ul>
-<li><p><strong>Probability based algorithms</strong> (logistic regression, support vector machines with a sigmoid kernel, neural networks with a sigmoid activation function, etc.) which output probability - a value between 0 and 1 indicating the likelihood of an observation belonging to the positive class (1)</p></li>
-<li><p>And <strong>Decision based algorithms</strong> (tree-based algorithms, etc.) which output a class label directly.</p></li>
-</ul>
-<p>In reality, probability outputs are preferred because they provide more information about the uncertainty of the prediction. Nevertheless, decision based algorithms can output probabilities by using calibration methods when required.</p>
-<p>After training, the model is evaluated on a test dataset to assess its performance. The evaluation process typically involves converting the predicted probabilities into class labels using a decision threshold, and then calculating various performance metrics based on the confusion matrix.</p>
-<p>In details,</p>
-<p><strong>Decision Threshold</strong>: is a value between 0 and 1 such that if the probability output is greater than or equal to the decision threshold, the observation is classified as the positive class (1); otherwise, it is classified as the negative class (0).</p>
-<p><strong>Confusion matrix</strong>: is obtained by comparing the predicted class labels from the model with the actual class labels (0 or 1) in the test dataset. It shows the counts of:</p>
-<ul>
-<li><p><em>True Positive (TP)</em>: The number of positive (1) instances correctly predicted as positive (1).</p></li>
-<li><p><em>True Negative (TN)</em>: The number of negative (0) instances correctly predicted as negative (0).</p></li>
-<li><p><em>False Positive (FP)</em>: The number of negative (0) instances incorrectly predicted as positive (1).</p></li>
-<li><p><em>False Negative (FN)</em>: The number of positive (1) instances incorrectly predicted as negative (0).</p></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="unpopular-opinions-on-binary-classification-assessment" class="level2">
-<h2 class="anchored" data-anchor-id="unpopular-opinions-on-binary-classification-assessment">Unpopular Opinions on Binary Classification Assessment</h2>
-<ul>
-<li><p><strong>Calibration</strong> is an often-neglected aspect when assessing the performance of classification models</p></li>
-<li><p><strong>Accuracy</strong> is just one of many evaluation metrics — a high accuracy alone doesn’t guarantee good real-world performance, especially in imbalanced datasets.</p></li>
-<li><p>While <strong>ROC curves</strong> are helpful for sensitivity analysis and threshold selection, interpreting them isn’t always straightforward, particularly when misclassification costs are unequal.</p></li>
-</ul>
-<section id="calibration-metrics" class="level3">
-<h3 class="anchored" data-anchor-id="calibration-metrics">Calibration metrics</h3>
-<p>Calibration metrics in classification tasks evaluate how close the model’s predicted probabilities are to the true class labels (0 or 1), indicating the model’s reliability in estimating probabilities.</p>
-<p>For example, in healthcare applications, a well-calibrated model would assign probabilities that closely reflect the true likelihood of disease presence or absence.</p>
-<p>Some of the most common calibration metrics are:</p>
-<ul>
-<li><p>The mean squared difference between predicted probabilities and actual class labels.</p>
-<p><span class="math display">\[
-\text{Brier Score} = \frac{1}{n} \sum_{i=1}^{n} (P_i - o_i)^2
-\]</span></p></li>
-<li><p>The negative log-likelihood of the predicted probabilities given the actual class labels.</p>
-<p><span class="math display">\[
-\text{Log Loss} = -\frac{1}{n} \sum_{i=1}^{n} \left[ o_i \log(P_i) + (1 - o_i) \log(1 - P_i) \right]
-\]</span></p></li>
-<li><p>The root mean squared difference between predicted probabilities and actual class labels.</p>
-<p><span class="math display">\[
-\text{RMS Calibration Error} = \sqrt{ \frac{1}{n} \sum_{i=1}^{n} (P_i - o_i)^2 }
-\]</span></p></li>
-</ul>
-<p>While the above metrics are useful for evaluating a model’s overall calibration, they don’t reveal how the model performs on each class individually. That’s why visualising predicted probabilities against actual class labels — as done in a reliability diagram (example in Figure 1 below)— is essential for uncovering insights that metrics alone might miss.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/calibration.png" class="img-fluid figure-img" style="width:80.0%" data-alt-text=""></p>
-<figcaption>Figure 1: The negative class (0) shows good calibration, with predicted probabilities tightly clustered around the actual class label. In contrast, the positive class (1) shows poorer calibration, with greater variability</figcaption>
-</figure>
-</div>
-</section>
-<section id="accuracy-metrics" class="level3">
-<h3 class="anchored" data-anchor-id="accuracy-metrics">Accuracy Metrics</h3>
-<p>These metrics are calculated after converting predicted probabilities to class labels (0 or 1) using the decision threshold.</p>
-<ul>
-<li><p>Accuracy: <span class="math inline">\(\frac{TP + TN}{TP + TN + FP + FN}\)</span></p></li>
-<li><p>Sensitivity (True Positive Rate, Recall): <span class="math inline">\(\frac{TP}{TP + FN}\)</span></p></li>
-<li><p>Specificity (True Negative Rate): <span class="math inline">\(\frac{TN}{TN + FP}\)</span></p></li>
-<li><p>Precision (Positive Predictive Value): <span class="math inline">\(\frac{TP}{TP + FP}\)</span></p></li>
-<li><p>False Positive Rate (FPR): <span class="math inline">\(\frac{FP}{FP + TN}\)</span></p></li>
-<li><p>F1 Score: <span class="math inline">\(2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}\)</span></p></li>
-<li><p>Balanced Accuracy: <span class="math inline">\(\frac{\text{Sensitivity} + \text{Specificity}}{2}\)</span></p></li>
-<li><p>And many more …</p></li>
-</ul>
-<p>These metrics give a fuller picture than accuracy alone, especially in imbalanced datasets where the number of instances in one class outweighs the other.</p>
-<p>For example, in a breast cancer classification dataset where 90% of the instances are cancer-free (class 0) and only 10% have cancer (class 1), a model that predicts everyone to be cancer-free would still achieve 90% accuracy. However, such a model would be useless, as it fails to identify any actual cancer cases.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/accuracy.png" class="img-fluid figure-img" style="width:80.0%" data-alt-text="Model performance at threshold 0.5 showing misclassification of the positive case"></p>
-<figcaption>Figure 2: An example of model performance on test data at the commonly used threshold of 0.5. The model achieves 90% accuracy but fails to detect the single positive case.</figcaption>
-</figure>
-</div>
-</section>
-<section id="sensitivity-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="sensitivity-analysis">Sensitivity analysis</h3>
-<p><strong>ROC Curve</strong> plots the true positive rate (sensitivity) against the false positive rate (1 - specificity) at various thresholds to reveal how sensitive the model is to changes in the decision threshold for each class.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/auc.png" class="img-fluid figure-img" style="width:80.0%" data-alt-text=""></p>
-<figcaption>Figure 3: This ROC curve suggests the model performs poorly across most thresholds. It only identifies positives at very low thresholds, with a high false positive rate. Overall, the model struggles to separate the classes effectively</figcaption>
-</figure>
-</div>
-<p>The optimal decision threshold is often chosen near the top-left corner of the ROC curve, where sensitivity and specificity are balanced. However, this assumes equal costs for false positives and false negatives — which is rarely the case.</p>
-<p>In breast cancer screening, for example, missing a cancer case (false negative) is more serious than flagging a healthy person (false positive). In such cases, the threshold is lowered to prioritize detecting positives, making ROC interpretation less straightforward.</p>
-<p>Figure 4 shows the same model as in Figure 3, with reliability diagram and a confusion matrix that updates with the threshold — making it easier to see how model’s performance changes.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/threshold_animation.gif" class="img-fluid figure-img" style="width:80.0%" data-alt-text=""></p>
-<figcaption>Figure 4: From the reliability diagram, varying the threshold dynamically reveals how lowering it reduce false negatives while increase false positives. The confusion matrix further highlights how sensitive the two classes are to changes in threshold</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="some-notes" class="level2">
-<h2 class="anchored" data-anchor-id="some-notes">Some Notes</h2>
-<p>This article is not meant to be an exhaustive guide to model performance assessment in binary classification, but rather a reflection on often overlooked aspects — particularly the role of calibration metrics and sensitivity to decision thresholds.</p>
-<p>The idea of plotting predicted probabilities against actual class labels to create a reliability diagram stems from my own experimentation. All example visualisations are created using R and the <code>ggplot2</code> package, plot data and code to create these figures are documented here</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -756,10 +569,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<script src="https://giscus.app/client.js" data-repo="tranlevantra/personal_website" data-repo-id="R_kgDOOZ_LBw" data-category="General" data-category-id="DIC_kwDOOZ_LB84CpOYq" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
-</script>
-<input type="hidden" id="giscus-base-theme" value="light">
-<input type="hidden" id="giscus-alt-theme" value="dark">
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

@@ -8,6 +8,8 @@
   },
   {
     "listing": "/project/index.html",
-    "items": []
+    "items": [
+      "/project/posts/personalwebsite/index.html"
+    ]
   }
 ]
