@@ -138,6 +138,6 @@ Figure 4 shows the same model as in Figure 3, with reliability diagram and a con
 
 ## Some Notes
 
-This article is not meant to be an exhaustive guide to model performance assessment in binary classification, but rather a reflection on often overlooked aspects — particularly the role of calibration metrics and sensitivity to decision thresholds.
+This article isn’t an exhaustive guide to model performance in binary classification, but a reflection on often overlooked aspects — especially calibration metrics and sensitivity to decision thresholds.
 
-The idea of plotting predicted probabilities against actual class labels to create a reliability diagram stems from my own experimentation. All example visualisations are created using R and the `ggplot2` package, plot data and code to create these figures are documented here 
+The idea of plotting predicted probabilities against actual labels (reliability diagrams) comes from my own experimentation. All visualisations were created in R using ggplot2. Data and code are available [here](https://github.com/tranlevantra/personal_website/tree/main/blog/posts/2024-12-11%20decision%20threshold/code). 
