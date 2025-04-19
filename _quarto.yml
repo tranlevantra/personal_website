@@ -23,6 +23,8 @@ website:
 
 format:
   html:
+    link-external-newwindow: true
+    link-external-icon: true
     theme: cosmo
     css: styles.css
 
