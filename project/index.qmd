@@ -1,6 +1,6 @@
 ---
 title: "My Project Listings"
-subtitle: "Both Done and In Progress"
+subtitle: "For documenting and sharing resources — all here"
 listing:
   contents: posts
   type: grid

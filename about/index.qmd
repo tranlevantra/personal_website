@@ -1,20 +1,48 @@
 ---
-title: ""
-toc: true
+title: "👋 Let's Get to Know Me Better!"
+format:
+  html:
+    toc: true
+    toc-depth: 4
 ---
 
-## 👋 Let's Get to Know Me Better!
+## 🇻🇳 Background
 
 ![](figures/Ha%20Giang.heic){width="95%"}
 
 > I was born and raised in **Northwestern Vietnam** — the mountainous region of quiet beauty and the most kind-hearted people.
 
-> *I like to do math, to cook, and to code.*\
-> (Yes, in that order.)
+
+### 🎓 Education
+
+**RMIT University** — Melbourne, Australia\
+*Master of Statistics & Operations Research*\
+*March 2023 – December 2024*
+
+**RMIT University Vietnam** — Hanoi, Vietnam\
+*Bachelor of Logistics & Supply Chain Management*\
+*October 2017 – May 2022*
 
 ------------------------------------------------------------------------
 
-## 🧠 MATH
+### 🌏 Work Experience
+
+I worked as an **Operations Intern** at **Toyota Motor Vietnam**, managing spare parts to ensure everything was ⏰ on time, ✅ in order, and 🦺 safe.
+
+Later, I became a **Software Tester** at **BSS Group**, creating and executing test plans based on technical specs 🧪.
+
+Both roles were detail-oriented 🧐 and taught me patience. I met amazing people ❤️, but soon realized I wanted something more analytical and math-driven — which led me to Statistics 📊✨.
+
+
+
+------------------------------------------------------------------------
+
+## 🥰 Some of My Favorite Things
+
+> *I like to do math, to cook, and to code.*\
+> (Yes, in that order.)
+
+### 🧠 MATH
 
 I’m a nerd — no doubt about it. But I have an explanation. Some people hit the gym to stay fit; I started solving math problems to keep my brain agile and sharp. And it’s funny — the more you do it, the more you *want* to do it. That’s how I ended up here.
 
@@ -24,7 +52,7 @@ The kind of math I study is **statistics** — not pure math, but a mathematical
 
 Because AI and machine learning are trending — and statistics is their backbone — here are some resources on *the math of data science* (tested and approved by a nerd 🤓):
 
-### 📐 Calculus
+#### 📐 Calculus
 
 -   Book: [*Calculus*](https://github.com/taivu312/books/tree/master/mathematics/calculus/stewart_calculus) by James Stewart
 -   Course: MIT OpenCourseWare
@@ -35,13 +63,13 @@ Because AI and machine learning are trending — and statistics is their backbon
     -   [Differential Calculus](https://www.khanacademy.org/math/differential-calculus)\
     -   [Multivariable Calculus](https://www.khanacademy.org/math/multivariable-calculus)
 
-### 📊 Linear Algebra
+#### 📊 Linear Algebra
 
 -   Book: [*Linear Algebra with Applications*](https://valpont.s3.amazonaws.com/uploads/20151219190836/Linear-Algebra-with-Applications.pdf) by Steven J. Leon
 -   Course: [MIT OCW 18.06 Linear Algebra](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/)\
 -   Visual & intuitive: [*Math for Game Devs*](https://www.youtube.com/playlist?list=PLImQaTpSAdsArRFFj8bIfqMk2X7Vlf3XF) by Freya Holmer — she’s so cute, love her 😍
 
-### 📈 Mathematical Statistics
+#### 📈 Mathematical Statistics
 
 I absolutely adore 📘 [*Statistical Inference*](https://pages.stat.wisc.edu/~shao/stat610/Casella_Berger_Statistical_Inference.pdf) by Casella and Berger, and I've set my sights next on 📗 [*Probability and Measure*](https://www.colorado.edu/amath/sites/default/files/attached-files/billingsley.pdf) by Patrick Billingsley.
 
@@ -49,7 +77,7 @@ I absolutely adore 📘 [*Statistical Inference*](https://pages.stat.wisc.edu/~s
 
 ------------------------------------------------------------------------
 
-## 🍜 COOKING
+### 🍜 COOKING
 
 My cooking journey began a long time ago. My parents work incredibly hard to provide for us, and as the oldest sister, I naturally found myself in the kitchen early on.
 
@@ -59,7 +87,7 @@ My [inspiration](https://vnexpress.net/doi-song/cooking/thuc-don)? This lovely c
 
 ------------------------------------------------------------------------
 
-## 💻 CODING
+### 💻 CODING
 
 I’m still new to coding — and feel so lucky that auto-completion, Copilot, and ChatGPT were already around when I began.
 
