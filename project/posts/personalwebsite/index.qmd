@@ -1,4 +1,0 @@
----
-title: "My personal website"
-description: "Inspirations and ALL resources I used to create this website"
----
