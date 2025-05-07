@@ -117,5 +117,68 @@
     "title": "👋 Let’s Get to Know Me Better!",
     "section": "🥰 Some of My Favorite Things",
     "text": "🥰 Some of My Favorite Things\n\nI like to do math, to cook, and to code.\n(Yes, in that order.)\n\n\n🧠 MATH\nI’m a nerd — no doubt about it. But I have an explanation. Some people hit the gym to stay fit; I started solving math problems to keep my brain agile and sharp. And it’s funny — the more you do it, the more you want to do it. That’s how I ended up here.\nThe kind of math I study is statistics — not pure math, but a mathematical science nonetheless. I feel incredibly grateful to study math at this level. And as cliché as it sounds: the more I learn, the more I realize how little I actually know.\n\n\n\n💡 A key result in probability theory underpinning many important statistical applications that deserves more attention\n\n\nBecause AI and machine learning are trending — and statistics is their backbone — here are some resources on the math of data science (tested and approved by a nerd 🤓):\n\n📐 Calculus\n\nBook: Calculus by James Stewart\nCourse: MIT OpenCourseWare\n\nSingle Variable Calculus\n\nMultivariable Calculus\n\n\nA fun, intuitive approach: Khan Academy\n\nIntegral Calculus\n\nDifferential Calculus\n\nMultivariable Calculus\n\n\n\n\n📊 Linear Algebra\n\nBook: Linear Algebra with Applications by Steven J. Leon\nCourse: MIT OCW 18.06 Linear Algebra\n\nVisual & intuitive: Math for Game Devs by Freya Holmer — she’s so cute, love her 😍\n\n\n\n📈 Mathematical Statistics\nI absolutely adore 📘 Statistical Inference by Casella and Berger, and I’ve set my sights next on 📗 Probability and Measure by Patrick Billingsley.\nAttached links are free content available on the internet. But if you want to support the authors, please consider buying the books!😉\n\n\n\n\n🍜 COOKING\nMy cooking journey began a long time ago. My parents work incredibly hard to provide for us, and as the oldest sister, I naturally found myself in the kitchen early on.\nThings really leveled up when I moved to Australia — I began cooking exquisite Vietnamese dishes to share my culture with new friends, soothe my homesickness, and explore cuisines from around the world.\nMy inspiration? This lovely collection from VnExpress. It’s in Vietnamese, but three things transcend all language barriers — love, music, and yes… food! ❤️🎶🍲\n\n\n\n💻 CODING\nI’m still new to coding — and feel so lucky that auto-completion, Copilot, and ChatGPT were already around when I began.\nMy favorite language so far is Java — it’s declarative, easy to read, and has just the right amount of strictness to catch bugs early. But the language I’m most fluent in is R, because I study Statistics — and R was developed by statisticians, for statisticians 📈.\nArguing about which programming language is “better” feels a bit pointless to me. Languages are tools, and each serves a different purpose. What matters is what you build with them.\nI do wish I’d taken Data Structures and Algorithms in school — It’s all good, there’s an abundance of amazing online resources now. 📚💻"
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "My Project Listing",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nGreater Melbourne Distribution Center Landscape\n\n\n\n\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/posts/2024-12-11 decision threshold/linkedin.html",
+    "href": "blog/posts/2024-12-11 decision threshold/linkedin.html",
+    "title": "linkedin",
+    "section": "",
+    "text": "Binary classification is a common task in machine learning. Here are some important points to keep in mind when evaluating binary classifiers:\n\nCalibration is an often-neglected aspect when assessing the performance of classification models\nAccuracy is just one of many evaluation metrics — a high accuracy alone doesn’t guarantee good real-world performance.\nWhile ROC curves are popular, they are so confusing. There is a better alternative: the precision-recall curve."
+  },
+  {
+    "objectID": "projects/posts/Greater Melbourne Distribution Center Landscape/index.html",
+    "href": "projects/posts/Greater Melbourne Distribution Center Landscape/index.html",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "",
+    "text": "This project aims to analyze the distribution center landscape in the Greater Melbourne area and point out changes in the landscape post-COVID-19. The analysis will focus on the following aspects:"
+  },
+  {
+    "objectID": "projects/posts/Greater Melbourne Distribution Center Landscape/index.html#background",
+    "href": "projects/posts/Greater Melbourne Distribution Center Landscape/index.html#background",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "",
+    "text": "This project aims to analyze the distribution center landscape in the Greater Melbourne area and point out changes in the landscape post-COVID-19. The analysis will focus on the following aspects:"
+  },
+  {
+    "objectID": "projects/posts/Greater Melbourne Distribution Center Landscape/analysis.html",
+    "href": "projects/posts/Greater Melbourne Distribution Center Landscape/analysis.html",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "",
+    "text": "This project aims to analyze the distribution center landscape in the Greater Melbourne area and point out changes in the landscape post-COVID-19. The analysis will focus on the following aspects:\n\nDistribution center locations\nDistribution center sizes"
+  },
+  {
+    "objectID": "projects/posts/Greater Melbourne Distribution Center Landscape/analysis.html#background",
+    "href": "projects/posts/Greater Melbourne Distribution Center Landscape/analysis.html#background",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "",
+    "text": "This project aims to analyze the distribution center landscape in the Greater Melbourne area and point out changes in the landscape post-COVID-19. The analysis will focus on the following aspects:\n\nDistribution center locations\nDistribution center sizes"
+  },
+  {
+    "objectID": "projects/posts/Greater Melbourne Distribution Center Landscape/analysis.html#population-density",
+    "href": "projects/posts/Greater Melbourne Distribution Center Landscape/analysis.html#population-density",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "Population Density",
+    "text": "Population Density\nPopulation density is a key factor in determining the location of distribution centers."
+  },
+  {
+    "objectID": "projects/posts/Greater Melbourne Distribution Center Landscape/analysis.html#findings",
+    "href": "projects/posts/Greater Melbourne Distribution Center Landscape/analysis.html#findings",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "Findings",
+    "text": "Findings\n\nMore inhouse Fullfillment Centers as businesses are moving towards securing their own supply chains to deal with disruptions and uncertainties.\nThe warehouse zone is get crowded with more and more distribution centers. In the near future, unoccupied land across the Sunburry line will become hotspot for new warehouses thanks to its accessibility to the metropolitan zone."
+  },
+  {
+    "objectID": "projects/posts/Greater Melbourne Distribution Center Landscape/analysis.html#distribution-center-locations",
+    "href": "projects/posts/Greater Melbourne Distribution Center Landscape/analysis.html#distribution-center-locations",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "Distribution Center Locations",
+    "text": "Distribution Center Locations\nDistribution centers are typically located in areas with high population density and good access to transportation networks. The following map shows the locations of distribution centers in the Greater Melbourne area."
   }
 ]

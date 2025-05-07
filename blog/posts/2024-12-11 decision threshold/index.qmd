@@ -2,7 +2,7 @@
 title: "On model performance assessment in binary classification tasks"
 author: "Tra Tran"
 date: '2024-12-11'
-url: "https://tranlevantra.github.io/blogs/#sensitivity-analysis"
+url: "https://tranlevantra.github.io/personal_website/blog/posts/2024-12-11%20decision%20threshold/"
 description: "A reflection on the often-neglected aspects of model performance assessment in binary classification tasks"
 image: figures/threshold_animation.gif
 
@@ -73,23 +73,23 @@ For example, in healthcare applications, a well-calibrated model would assign pr
 
 Some of the most common calibration metrics are:
 
-- The mean squared difference between predicted probabilities and actual class labels.
+-   The mean squared difference between predicted probabilities and actual class labels.
 
-  $$
-  \text{Brier Score} = \frac{1}{n} \sum_{i=1}^{n} (P_i - o_i)^2
-  $$
+    $$
+    \text{Brier Score} = \frac{1}{n} \sum_{i=1}^{n} (P_i - o_i)^2
+    $$
 
-- The negative log-likelihood of the predicted probabilities given the actual class labels.
+-   The negative log-likelihood of the predicted probabilities given the actual class labels.
 
-  $$
-  \text{Log Loss} = -\frac{1}{n} \sum_{i=1}^{n} \left[ o_i \log(P_i) + (1 - o_i) \log(1 - P_i) \right]
-  $$
+    $$
+    \text{Log Loss} = -\frac{1}{n} \sum_{i=1}^{n} \left[ o_i \log(P_i) + (1 - o_i) \log(1 - P_i) \right]
+    $$
 
-- The root mean squared difference between predicted probabilities and actual class labels.
+-   The root mean squared difference between predicted probabilities and actual class labels.
 
-  $$
-  \text{RMS Calibration Error} = \sqrt{ \frac{1}{n} \sum_{i=1}^{n} (P_i - o_i)^2 }
-  $$
+    $$
+    \text{RMS Calibration Error} = \sqrt{ \frac{1}{n} \sum_{i=1}^{n} (P_i - o_i)^2 }
+    $$
 
 While the above metrics are useful for evaluating a model’s overall calibration, they don’t reveal how the model performs on each class individually. That’s why visualising predicted probabilities against actual class labels — as done in a reliability diagram (example in Figure 1 below)— is essential for uncovering insights that metrics alone might miss.
 
@@ -99,19 +99,19 @@ While the above metrics are useful for evaluating a model’s overall calibratio
 
 These metrics are calculated after converting predicted probabilities to class labels (0 or 1) using the decision threshold.
 
-- Accuracy: $\frac{TP + TN}{TP + TN + FP + FN}$
+-   Accuracy: $\frac{TP + TN}{TP + TN + FP + FN}$
 
-- Sensitivity (True Positive Rate, Recall): $\frac{TP}{TP + FN}$
+-   Sensitivity (True Positive Rate, Recall): $\frac{TP}{TP + FN}$
 
-- Specificity (True Negative Rate): $\frac{TN}{TN + FP}$
+-   Specificity (True Negative Rate): $\frac{TN}{TN + FP}$
 
-- Precision (Positive Predictive Value): $\frac{TP}{TP + FP}$
+-   Precision (Positive Predictive Value): $\frac{TP}{TP + FP}$
 
-- False Positive Rate (FPR): $\frac{FP}{FP + TN}$
+-   False Positive Rate (FPR): $\frac{FP}{FP + TN}$
 
-- F1 Score: $2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}$
+-   F1 Score: $2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}$
 
-- Balanced Accuracy: $\frac{\text{Sensitivity} + \text{Specificity}}{2}$
+-   Balanced Accuracy: $\frac{\text{Sensitivity} + \text{Specificity}}{2}$
 
 -   And many more ...
 
@@ -135,9 +135,8 @@ Figure 4 shows the same model as in Figure 3, with reliability diagram and a con
 
 ![Figure 4: From the reliability diagram, varying the threshold dynamically reveals how lowering it reduce false negatives while increase false positives. The confusion matrix further highlights how sensitive the two classes are to changes in threshold](figures/threshold_animation.gif){width="80%" alt-text=""}
 
-
 ## Some Notes
 
 This article isn’t an exhaustive guide to model performance in binary classification, but a reflection on often overlooked aspects — especially calibration metrics and sensitivity to decision thresholds.
 
-The idea of plotting predicted probabilities against actual labels (reliability diagrams) comes from my own experimentation. All visualisations were created in R using ggplot2. Data and code are available [here](https://github.com/tranlevantra/personal_website/tree/main/blog/posts/2024-12-11%20decision%20threshold/code). 
+The idea of plotting predicted probabilities against actual labels (reliability diagrams) comes from my own experimentation. All visualisations were created in R using ggplot2. Data and code are available [here](https://github.com/tranlevantra/personal_website/tree/main/blog/posts/2024-12-11%20decision%20threshold/code).

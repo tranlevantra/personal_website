@@ -1,0 +1,17 @@
+---
+title: "My Project Listing"
+subtitle: "To showcase What I have done and How I did it" 
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [image, date, title, author, reading-time, description]
+page-layout: full
+reading-time: true
+date-format: long
+title-block-banner: true
+comment: false
+---
