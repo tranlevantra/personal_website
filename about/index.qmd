@@ -8,10 +8,9 @@ format:
 
 ## 🇻🇳 Background
 
-![](figures/Ha%20Giang.heic){width="95%"}
+![](figures/Ha%20Giang.png){width="95%"}
 
 > I was born and raised in **Northwestern Vietnam** — the mountainous region of quiet beauty and the most kind-hearted people.
-
 
 ### 🎓 Education
 
@@ -32,8 +31,6 @@ I worked as an **Operations Intern** at **Toyota Motor Vietnam**, managing spare
 Later, I became a **Software Tester** at **BSS Group**, creating and executing test plans based on technical specs 🧪.
 
 Both roles were detail-oriented 🧐 and taught me patience. I met amazing people ❤️, but soon realized I wanted something more analytical and math-driven — which led me to Statistics 📊✨.
-
-
 
 ------------------------------------------------------------------------
 
