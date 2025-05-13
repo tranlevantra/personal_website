@@ -2,6 +2,7 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/posts/2025-05-13 ASGS/index.html",
       "/blog/posts/2024-12-18 testamur/index.html",
       "/blog/posts/2024-12-11 decision threshold/index.html"
     ]
@@ -15,7 +16,7 @@
   {
     "listing": "/projects/index.html",
     "items": [
-      "/projects/posts/Greater Melbourne Distribution Center Landscape/analysis.html"
+      "/projects/posts/fullfillmentCenter.html"
     ]
   }
 ]
