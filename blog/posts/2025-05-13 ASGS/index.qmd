@@ -2,8 +2,9 @@
 title: "The Main Structure of Australian Statistical Geography Standard (ASGS) Third Edition"
 author: "Tra Tran"
 date: '2025-05-13'
-url: "https://tranlevantra.github.io/personal_website/blog/posts/2024-12-11%20decision%20threshold/"
-description: "ASGS is developed by Australian Bureau of Statistics (ABS) to provide a consistent framework for the collection, analysis and dissemination of statistical data based on social geography - the distribution of people and communities, rather than administrative bounderies. "
+url: "https://tranlevantra.github.io/personal_website/blog/posts/2025-05-13%20ASGS/"
+image: "fig/Australia.png"
+description: "A framework to collect, analyse and disseminate statistical data based on social geography - the distribution of people and communities, rather than administrative bounderies"
 
 categories:
   - spatial statistics
