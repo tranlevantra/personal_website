@@ -4,7 +4,7 @@
     "href": "blog/index.html",
     "title": "Welcome to my Blog",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nI photoshoped my Testamur\n\n\n\n\n\n\n\n\n\n\n\nDecember 18, 2024\n\n\nTra Tran\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\nOn model performance assessment in binary classification tasks\n\n\n\n\n\nA reflection on the often-neglected aspects of model performance assessment in binary classification tasks\n\n\n\n\n\nDecember 11, 2024\n\n\nTra Tran\n\n\n6 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nThe Main Structure of Australian Statistical Geography Standard (ASGS) Third Edition\n\n\n\n\n\nA framework to collect, analyse and disseminate statistical data based on social geography - the distribution of people and communities, rather than administrative bounderies\n\n\n\n\n\nMay 13, 2025\n\n\nTra Tran\n\n\n3 min\n\n\n\n\n\n\n\n\n\n\n\n\nI photoshoped my Testamur\n\n\n\n\n\n\n\n\n\n\n\nDecember 18, 2024\n\n\nTra Tran\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\nOn model performance assessment in binary classification tasks\n\n\n\n\n\nA reflection on the often-neglected aspects of model performance assessment in binary classification tasks\n\n\n\n\n\nDecember 11, 2024\n\n\nTra Tran\n\n\n6 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "home/index.html",
@@ -123,7 +123,7 @@
     "href": "projects/index.html",
     "title": "My Project Listing",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nGreater Melbourne Distribution Center Landscape\n\n\n\n\n\n\n\n\n\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nGreater Melbourne Distribution Center Landscape\n\n\n\n\n\nFullfillment landscape in Greater Melbourne\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/posts/2024-12-11 decision threshold/linkedin.html",
@@ -137,14 +137,14 @@
     "href": "projects/posts/Greater Melbourne Distribution Center Landscape/index.html",
     "title": "Greater Melbourne Distribution Center Landscape",
     "section": "",
-    "text": "This project aims to analyze the distribution center landscape in the Greater Melbourne area and point out changes in the landscape post-COVID-19. The analysis will focus on the following aspects:"
+    "text": "This project aims to analyze the distribution center landscape in the Greater Melbourne area and point out changes in the landscape post-COVID-19. The analysis will focus on the following aspects:\n\nDistribution center locations\nDistribution center sizes"
   },
   {
     "objectID": "projects/posts/Greater Melbourne Distribution Center Landscape/index.html#background",
     "href": "projects/posts/Greater Melbourne Distribution Center Landscape/index.html#background",
     "title": "Greater Melbourne Distribution Center Landscape",
     "section": "",
-    "text": "This project aims to analyze the distribution center landscape in the Greater Melbourne area and point out changes in the landscape post-COVID-19. The analysis will focus on the following aspects:"
+    "text": "This project aims to analyze the distribution center landscape in the Greater Melbourne area and point out changes in the landscape post-COVID-19. The analysis will focus on the following aspects:\n\nDistribution center locations\nDistribution center sizes"
   },
   {
     "objectID": "projects/posts/Greater Melbourne Distribution Center Landscape/analysis.html",
@@ -180,5 +180,164 @@
     "title": "Greater Melbourne Distribution Center Landscape",
     "section": "Distribution Center Locations",
     "text": "Distribution Center Locations\nDistribution centers are typically located in areas with high population density and good access to transportation networks. The following map shows the locations of distribution centers in the Greater Melbourne area."
+  },
+  {
+    "objectID": "projects/posts/Greater Melbourne Distribution Center Landscape/index.html#population-density",
+    "href": "projects/posts/Greater Melbourne Distribution Center Landscape/index.html#population-density",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "Population Density",
+    "text": "Population Density\nPopulation density is a key factor in determining the location of distribution centers."
+  },
+  {
+    "objectID": "projects/posts/Greater Melbourne Distribution Center Landscape/index.html#distribution-center-locations",
+    "href": "projects/posts/Greater Melbourne Distribution Center Landscape/index.html#distribution-center-locations",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "Distribution Center Locations",
+    "text": "Distribution Center Locations\nDistribution centers are typically located in areas with high population density and good access to transportation networks. The following map shows the locations of distribution centers in the Greater Melbourne area."
+  },
+  {
+    "objectID": "projects/posts/Greater Melbourne Distribution Center Landscape/index.html#findings",
+    "href": "projects/posts/Greater Melbourne Distribution Center Landscape/index.html#findings",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "Findings",
+    "text": "Findings\n\nMore inhouse Fullfillment Centers as businesses are moving towards securing their own supply chains to deal with disruptions and uncertainties.\nThe warehouse zone is get crowded with more and more distribution centers. In the near future, unoccupied land across the Sunburry line will become hotspot for new warehouses thanks to its accessibility to the metropolitan zone."
+  },
+  {
+    "objectID": "projects/posts/Greater Melbourne Distribution Center Landscape/sections/analysis.html",
+    "href": "projects/posts/Greater Melbourne Distribution Center Landscape/sections/analysis.html",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "",
+    "text": "This project aims to analyze the distribution center landscape in the Greater Melbourne area and point out changes in the landscape post-COVID-19. The analysis will focus on the following aspects:\n\nDistribution center locations\nDistribution center sizes"
+  },
+  {
+    "objectID": "projects/posts/Greater Melbourne Distribution Center Landscape/sections/analysis.html#background",
+    "href": "projects/posts/Greater Melbourne Distribution Center Landscape/sections/analysis.html#background",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "",
+    "text": "This project aims to analyze the distribution center landscape in the Greater Melbourne area and point out changes in the landscape post-COVID-19. The analysis will focus on the following aspects:\n\nDistribution center locations\nDistribution center sizes"
+  },
+  {
+    "objectID": "projects/posts/Greater Melbourne Distribution Center Landscape/sections/analysis.html#population-density",
+    "href": "projects/posts/Greater Melbourne Distribution Center Landscape/sections/analysis.html#population-density",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "Population Density",
+    "text": "Population Density\nPopulation density is a key factor in determining the location of distribution centers."
+  },
+  {
+    "objectID": "projects/posts/Greater Melbourne Distribution Center Landscape/sections/analysis.html#distribution-center-locations",
+    "href": "projects/posts/Greater Melbourne Distribution Center Landscape/sections/analysis.html#distribution-center-locations",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "Distribution Center Locations",
+    "text": "Distribution Center Locations\nDistribution centers are typically located in areas with high population density and good access to transportation networks. The following map shows the locations of distribution centers in the Greater Melbourne area."
+  },
+  {
+    "objectID": "projects/posts/Greater Melbourne Distribution Center Landscape/sections/analysis.html#findings",
+    "href": "projects/posts/Greater Melbourne Distribution Center Landscape/sections/analysis.html#findings",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "Findings",
+    "text": "Findings\n\nMore inhouse Fullfillment Centers as businesses are moving towards securing their own supply chains to deal with disruptions and uncertainties.\nThe warehouse zone is get crowded with more and more distribution centers. In the near future, unoccupied land across the Sunburry line will become hotspot for new warehouses thanks to its accessibility to the metropolitan zone."
+  },
+  {
+    "objectID": "projects/posts/fullfillmentCenter.html",
+    "href": "projects/posts/fullfillmentCenter.html",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "",
+    "text": "I did this because I like to\nMotivation: Yes\nProject scope: Greater Melbourne region",
+    "crumbs": [
+      "Greater Melbourne Distribution Center Landscape"
+    ]
+  },
+  {
+    "objectID": "projects/posts/fullfillmentCenter.html#preface",
+    "href": "projects/posts/fullfillmentCenter.html#preface",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "",
+    "text": "I did this because I like to\nMotivation: Yes\nProject scope: Greater Melbourne region",
+    "crumbs": [
+      "Greater Melbourne Distribution Center Landscape"
+    ]
+  },
+  {
+    "objectID": "projects/Greater Melbourne Distribution Center Landscape/index.html",
+    "href": "projects/Greater Melbourne Distribution Center Landscape/index.html",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "",
+    "text": "This project aims to analyze the distribution center landscape in the Greater Melbourne area and point out changes in the landscape post-COVID-19. The analysis will focus on the following aspects:\n\nDistribution center locations\nDistribution center sizes",
+    "crumbs": [
+      "Home",
+      "Greater Melbourne Distribution Center Landscape"
+    ]
+  },
+  {
+    "objectID": "projects/Greater Melbourne Distribution Center Landscape/index.html#background",
+    "href": "projects/Greater Melbourne Distribution Center Landscape/index.html#background",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "",
+    "text": "This project aims to analyze the distribution center landscape in the Greater Melbourne area and point out changes in the landscape post-COVID-19. The analysis will focus on the following aspects:\n\nDistribution center locations\nDistribution center sizes",
+    "crumbs": [
+      "Home",
+      "Greater Melbourne Distribution Center Landscape"
+    ]
+  },
+  {
+    "objectID": "projects/Greater Melbourne Distribution Center Landscape/index.html#population-density",
+    "href": "projects/Greater Melbourne Distribution Center Landscape/index.html#population-density",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "Population Density",
+    "text": "Population Density\nPopulation density is a key factor in determining the location of distribution centers.",
+    "crumbs": [
+      "Home",
+      "Greater Melbourne Distribution Center Landscape"
+    ]
+  },
+  {
+    "objectID": "projects/Greater Melbourne Distribution Center Landscape/index.html#distribution-center-locations",
+    "href": "projects/Greater Melbourne Distribution Center Landscape/index.html#distribution-center-locations",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "Distribution Center Locations",
+    "text": "Distribution Center Locations\nDistribution centers are typically located in areas with high population density and good access to transportation networks. The following map shows the locations of distribution centers in the Greater Melbourne area.",
+    "crumbs": [
+      "Home",
+      "Greater Melbourne Distribution Center Landscape"
+    ]
+  },
+  {
+    "objectID": "projects/Greater Melbourne Distribution Center Landscape/index.html#findings",
+    "href": "projects/Greater Melbourne Distribution Center Landscape/index.html#findings",
+    "title": "Greater Melbourne Distribution Center Landscape",
+    "section": "Findings",
+    "text": "Findings\n\nMore inhouse Fullfillment Centers as businesses are moving towards securing their own supply chains to deal with disruptions and uncertainties.\nThe warehouse zone is get crowded with more and more distribution centers. In the near future, unoccupied land across the Sunburry line will become hotspot for new warehouses thanks to its accessibility to the metropolitan zone.",
+    "crumbs": [
+      "Home",
+      "Greater Melbourne Distribution Center Landscape"
+    ]
+  },
+  {
+    "objectID": "blog/posts/2025-05-13 ASGS/index.html",
+    "href": "blog/posts/2025-05-13 ASGS/index.html",
+    "title": "The Main Structure of Australian Statistical Geography Standard (ASGS) Third Edition",
+    "section": "",
+    "text": "The Main Structure of Australian Statistical Geography Standard (ASGS) \\({3}^{th}\\) Edition has 7 levels, and is developed based on the concept of a functional area - an area within which many people commute or travel to access services.\n\n\n\n\n\n\n\n\n\nGeographic Level\nPopulation Range\nComposition\nPrimary Use\n\n\n\n\nMesh Block (MB)\n30–60 dwellings\nSmallest classification with 368,286 units\nFoundation for all ASGS levels\n\n\nStatistical Area Level 1 (SA1)\n200–800 people\nBuilt from 61,845 Mesh Blocks\nDetailed Census dissemination\n\n\nStatistical Area Level 2 (SA2)\n3,000–25,000 people\nBuilt from 2,475 SA1s\nCommunity health & service stats\n\n\nStatistical Area Level 3 (SA3)\n30,000–130,000 people\nBuilt from 359 SA2s\nRegional planning and comparison\n\n\nStatistical Area Level 4 (SA4)\n100,000–500,000 people\nBuilt from 108 SA3s\nLabour force reporting\n\n\nState/Territory\nVaries widely\nBuilt from 9 SA4s + 1 Other Territory (OT)\nNational-level statistics and governance\n\n\nAustralia\n\nBuilt from 8 States/Territories + 1 Other Territory (OT)\n\n\n\n\nSource: ABS ASGS Edition 3"
+  },
+  {
+    "objectID": "blog/posts/2025-05-13 ASGS/index.html#summary-of-the-main-structure-of-asgs",
+    "href": "blog/posts/2025-05-13 ASGS/index.html#summary-of-the-main-structure-of-asgs",
+    "title": "The Main Structure of Australian Statistical Geography Standard (ASGS) Edition 3",
+    "section": "",
+    "text": "Main Structure of the Australian Statistical Geography Standard (ASGS) \\({3}^{th}\\) Edition has 7 levels, and is developed based on the concept of a functional area - an area within which many people commute or travel to access services.\n\n\n\n\n\n\n\n\n\nGeographic Level\nPopulation Range\nComposition\nPrimary Use\n\n\n\n\nMesh Block (MB)\n30–60 dwellings\nSmallest classification with 368,286 units\nFoundation for all ASGS levels\n\n\nStatistical Area Level 1 (SA1)\n200–800 people\nBuilt from 61,845 Mesh Blocks\nDetailed Census dissemination\n\n\nStatistical Area Level 2 (SA2)\n3,000–25,000 people\nBuilt from 2,475 SA1s\nCommunity health & service stats\n\n\nStatistical Area Level 3 (SA3)\n30,000–130,000 people\nBuilt from 359 SA2s\nRegional planning and comparison\n\n\nStatistical Area Level 4 (SA4)\n100,000–500,000 people\nBuilt from 108 SA3s\nLabour force reporting\n\n\nState/Territory\nVaries widely\nBuilt from 9 SA4s + 1 Other Territory (OT)\nNational-level statistics and governance\n\n\nAustralia\n\nBuilt from 8 States/Territories + 1 Other Territory (OT)\n\n\n\n\nSource: ABS ASGS Edition 3"
+  },
+  {
+    "objectID": "blog/posts/2025-05-13 ASGS/index.html#interactive-map",
+    "href": "blog/posts/2025-05-13 ASGS/index.html#interactive-map",
+    "title": "The Main Structure of Australian Statistical Geography Standard (ASGS) Third Edition",
+    "section": "Interactive Map",
+    "text": "Interactive Map\nBelow interactive map gives examples of how higher level aggregations are built from lower level ones.\nWhile Greater Capital City Statistical Areas (GCCSA) are not a part of the ASGS, they are built from SA4s, and are used to provide a more detailed understanding of the population distribution and characteristics within major urban areas of State and Territory.\n\nOverviewMesh BlockSA1SA2SA3SA4GCCSAState/Territory\n\n\n\n\n\n\nAn overview of the Main Structure. Filter map layers and Adjust zoom in-out options for better understanding.\n\n\n\n\n\n\n\n\nNorth Melbourne’s Mesh Block agregations.\n\n\n\n\n\n\n\n\nNorth Melbourne’s SA1 agregations.\n\n\n\n\n\n\n\n\nMelbourne City’s SA2 agregrations.\n\n\n\n\n\n\n\n\nMelbourne-Inner’s SA3 agregrations.\n\n\n\n\n\n\n\n\nGreater Melbourne’s SA4 agregrations.\n\n\n\n\n\n\n\n\nVictoria’ GCCSA aggregations involve Greater Melbourne and Rest of Victoria.\n\n\n\n\n\n\n\n\nAustralia’s State/Territory agregations involve 8 States and 1 Other Territory (OT)."
+  },
+  {
+    "objectID": "blog/posts/2025-05-13 ASGS/index.html#overview",
+    "href": "blog/posts/2025-05-13 ASGS/index.html#overview",
+    "title": "The Main Structure of Australian Statistical Geography Standard (ASGS) Third Edition",
+    "section": "",
+    "text": "The Main Structure of Australian Statistical Geography Standard (ASGS) \\({3}^{th}\\) Edition has 7 levels, and is developed based on the concept of a functional area - an area within which many people commute or travel to access services.\n\n\n\n\n\n\n\n\n\nGeographic Level\nPopulation Range\nComposition\nPrimary Use\n\n\n\n\nMesh Block (MB)\n30–60 dwellings\nSmallest classification with 368,286 units\nFoundation for all ASGS levels\n\n\nStatistical Area Level 1 (SA1)\n200–800 people\nBuilt from 61,845 Mesh Blocks\nDetailed Census dissemination\n\n\nStatistical Area Level 2 (SA2)\n3,000–25,000 people\nBuilt from 2,475 SA1s\nCommunity health & service stats\n\n\nStatistical Area Level 3 (SA3)\n30,000–130,000 people\nBuilt from 359 SA2s\nRegional planning and comparison\n\n\nStatistical Area Level 4 (SA4)\n100,000–500,000 people\nBuilt from 108 SA3s\nLabour force reporting\n\n\nState/Territory\nVaries widely\nBuilt from 9 SA4s + 1 Other Territory (OT)\nNational-level statistics and governance\n\n\nAustralia\n\nBuilt from 8 States/Territories + 1 Other Territory (OT)\n\n\n\n\nSource: ABS ASGS Edition 3"
   }
 ]
