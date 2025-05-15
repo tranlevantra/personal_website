@@ -123,7 +123,7 @@
     "href": "projects/index.html",
     "title": "My Project Listing",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nGreater Melbourne Distribution Center Landscape\n\n\n\n\n\nFullfillment landscape in Greater Melbourne\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nFullfillment Centers in Greater Melbourne\n\n\nA research into Fulfillment Center landscape of Greater Melbourne\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/posts/2024-12-11 decision threshold/linkedin.html",
@@ -240,21 +240,21 @@
   {
     "objectID": "projects/posts/fullfillmentCenter.html",
     "href": "projects/posts/fullfillmentCenter.html",
-    "title": "Greater Melbourne Distribution Center Landscape",
+    "title": "Fullfillment Centers in Greater Melbourne",
     "section": "",
-    "text": "I did this because I like to\nMotivation: Yes\nProject scope: Greater Melbourne region",
+    "text": "My mentor, with 40 years in U.S. warehousing, once said, “The industry used to be simple—everything was routine—and universal: whether in Vietnam or the U.S., it was always ‘safety first, everything else follows.’ That is, until e-commerce became a thing.”\nThe Covid-19 pandemic further nurtured online shopping habits, made uncertainty the norm, and accelerated the adoption of automation and robotics to take over labor-intensive roles in warehouse operations.\nAs someone with warehousing experience in Vietnam, new to Melbourne post-Covid, and hooked on online shopping, this project is my attempt to explore the Australian warehousing industry and understand how the pandemic has reshaped it.",
     "crumbs": [
-      "Greater Melbourne Distribution Center Landscape"
+      "Fullfillment Centers in Greater Melbourne"
     ]
   },
   {
     "objectID": "projects/posts/fullfillmentCenter.html#preface",
     "href": "projects/posts/fullfillmentCenter.html#preface",
-    "title": "Greater Melbourne Distribution Center Landscape",
+    "title": "Fullfillment Centers in Greater Melbourne",
     "section": "",
-    "text": "I did this because I like to\nMotivation: Yes\nProject scope: Greater Melbourne region",
+    "text": "My mentor, with 40 years in U.S. warehousing, once said, “The industry used to be simple—everything was routine—and universal: whether in Vietnam or the U.S., it was always ‘safety first, everything else follows.’ That is, until e-commerce became a thing.”\nThe Covid-19 pandemic further nurtured online shopping habits, made uncertainty the norm, and accelerated the adoption of automation and robotics to take over labor-intensive roles in warehouse operations.\nAs someone with warehousing experience in Vietnam, new to Melbourne post-Covid, and hooked on online shopping, this project is my attempt to explore the Australian warehousing industry and understand how the pandemic has reshaped it.",
     "crumbs": [
-      "Greater Melbourne Distribution Center Landscape"
+      "Fullfillment Centers in Greater Melbourne"
     ]
   },
   {
@@ -339,5 +339,71 @@
     "title": "The Main Structure of Australian Statistical Geography Standard (ASGS) Third Edition",
     "section": "",
     "text": "The Main Structure of Australian Statistical Geography Standard (ASGS) \\({3}^{th}\\) Edition has 7 levels, and is developed based on the concept of a functional area - an area within which many people commute or travel to access services.\n\n\n\n\n\n\n\n\n\nGeographic Level\nPopulation Range\nComposition\nPrimary Use\n\n\n\n\nMesh Block (MB)\n30–60 dwellings\nSmallest classification with 368,286 units\nFoundation for all ASGS levels\n\n\nStatistical Area Level 1 (SA1)\n200–800 people\nBuilt from 61,845 Mesh Blocks\nDetailed Census dissemination\n\n\nStatistical Area Level 2 (SA2)\n3,000–25,000 people\nBuilt from 2,475 SA1s\nCommunity health & service stats\n\n\nStatistical Area Level 3 (SA3)\n30,000–130,000 people\nBuilt from 359 SA2s\nRegional planning and comparison\n\n\nStatistical Area Level 4 (SA4)\n100,000–500,000 people\nBuilt from 108 SA3s\nLabour force reporting\n\n\nState/Territory\nVaries widely\nBuilt from 9 SA4s + 1 Other Territory (OT)\nNational-level statistics and governance\n\n\nAustralia\n\nBuilt from 8 States/Territories + 1 Other Territory (OT)\n\n\n\n\nSource: ABS ASGS Edition 3"
+  },
+  {
+    "objectID": "projects/Greater Melbourne Distribution Center Landscape/analysis.html",
+    "href": "projects/Greater Melbourne Distribution Center Landscape/analysis.html",
+    "title": "Findings and Analysis",
+    "section": "",
+    "text": "Terminology\n\n\n\n\n\n\n\nFulfillment centers are specialized warehouses that store finished products and handle picking, packing, and shipping—either to retail stores or directly to customers.\n\n\n\n\nStrategic location: Often near transport hubs and densely populated areas to ensure fast, efficient delivery to end customers.\nHigh scalability: Designed to handle large, fluctuating volumes of small-parcel, multi-item orders shipped to geographically dispersed destinations. Advanced technology and automation are often required to maintain speed and accuracy.\n\n\n\n\n\n3PL (Third-Party Logistics):\nOperated by logistics providers, offering warehousing and order fulfillment services to multiple companies — ideal for small e-commerce businesses without in-house logistics capabilities.\nIn-House:\nManaged by the product-selling company itself, typically used by large retailers or brands with high order volumes and their own delivery team for better control over operations.",
+    "crumbs": [
+      "Home",
+      "Findings and Analysis"
+    ]
+  },
+  {
+    "objectID": "projects/Greater Melbourne Distribution Center Landscape/analysis.html#background",
+    "href": "projects/Greater Melbourne Distribution Center Landscape/analysis.html#background",
+    "title": "Findings and Analysis",
+    "section": "",
+    "text": "Terminology and Definitions\n\n\n\n\n\n\n\nFulfillment centers are specialized warehouses that store finished products and handle picking, packing, and shipping—either to retail stores or directly to customers.\n\n\n\n\nStrategic location: Often near transport hubs and densely populated areas to ensure fast, efficient delivery to end customers.\nHigh scalability: Designed to handle large, fluctuating volumes of small-parcel, multi-item orders shipped to geographically dispersed destinations. Advanced technology and automation are often required to maintain speed and accuracy.\n\n\n\n\n\n3PL (Third-Party Logistics):\nOperated by logistics providers, offering warehousing and order fulfillment services to multiple companies — ideal for small e-commerce businesses without in-house logistics capabilities.\nIn-House:\nManaged by the product-selling company itself, typically used by large retailers or brands with high order volumes and their own delivery team for greater control over operations.",
+    "crumbs": [
+      "Home",
+      "Findings and Analysis"
+    ]
+  },
+  {
+    "objectID": "projects/Greater Melbourne Distribution Center Landscape/analysis.html#findings",
+    "href": "projects/Greater Melbourne Distribution Center Landscape/analysis.html#findings",
+    "title": "Findings and Analysis",
+    "section": "Findings",
+    "text": "Findings\n\n\nNote: Information on fulfillment centers in Greater Melbourne was collected through manual searches on Google Maps, company website visits, news articles, and LinkedIn posts. The data is not exhaustive and may not represent the complete landscape of fulfillment centers in the region.",
+    "crumbs": [
+      "Home",
+      "Findings and Analysis"
+    ]
+  },
+  {
+    "objectID": "projects/Greater Melbourne Distribution Center Landscape/analysis.html#analysis",
+    "href": "projects/Greater Melbourne Distribution Center Landscape/analysis.html#analysis",
+    "title": "Findings and Analysis",
+    "section": "Analysis",
+    "text": "Analysis\n\nAs the pandemic exposed the risks of outsourcing, more in-house fulfillment centers are being built. Major supermarket chains such as Coles, Woolworths, and MetCash-IGA only began developing their own distribution centers after COVID-19. Coles, for instance, relied on Linfox as its 3PL provider in 2018 but is now constructing its first in-house, fully automated facility in Melbourne. Among established names, only Aldi had its own center as early as 2010—its market-leading position highlights the benefits of full supply chain control.\nDespite the e-commerce boom, the 3PL market remains heavily dominated by Amazon, which continues to expand with mega fulfillment centers.\nFully automated fulfillment centers are becoming the norm, with new warehouses built by large, well-capitalized players like Amazon and Coles. These technologies are often out of reach for smaller operators, raising market barriers for new entrants.\nAltona, Laverton North, and Truganina remain key warehousing hubs, supported by ample land reserves for ongoing industrial development.",
+    "crumbs": [
+      "Home",
+      "Findings and Analysis"
+    ]
+  },
+  {
+    "objectID": "projects/Greater Melbourne Distribution Center Landscape/warehouseLocations.html",
+    "href": "projects/Greater Melbourne Distribution Center Landscape/warehouseLocations.html",
+    "title": "Fullfillment Center Locations",
+    "section": "",
+    "text": "I ll do this tmr",
+    "crumbs": [
+      "Home",
+      "Fullfillment Center Locations"
+    ]
+  },
+  {
+    "objectID": "projects/Greater Melbourne Distribution Center Landscape/populationDensity.html",
+    "href": "projects/Greater Melbourne Distribution Center Landscape/populationDensity.html",
+    "title": "Population Density",
+    "section": "",
+    "text": "Stay tuned to know how I plot the population density dots on the map.",
+    "crumbs": [
+      "Home",
+      "Population Density"
+    ]
   }
 ]

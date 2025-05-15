@@ -1,0 +1,22 @@
+---
+title: "Fullfillment Centers in Greater Melbourne"
+description: "A research into Fulfillment Center landscape of Greater Melbourne"
+image: "fig/fullfillmentCenter.png"
+page-layout: article
+format:
+  html:
+    toc: true
+---
+
+## Preface
+
+My mentor, with 40 years in U.S. warehousing, once said,
+*“The industry used to be simple—everything was routine—and universal: whether in Vietnam or the U.S., it was always ‘safety first, everything else follows.’ That is, until e-commerce became a thing.”*
+
+The Covid-19 pandemic further nurtured online shopping habits, made uncertainty the norm, and accelerated the adoption of automation and robotics to take over labor-intensive roles in warehouse operations.
+
+As someone with warehousing experience in Vietnam, new to Melbourne post-Covid, and hooked on online shopping, this project is my attempt to explore the Australian warehousing industry and understand how the pandemic has reshaped it.
+
+
+
+

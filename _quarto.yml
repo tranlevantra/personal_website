@@ -17,6 +17,20 @@ website:
     right:
       - href: https://github.com/tranlevantra/personal_website
         icon: github
+        
+  sidebar:
+    - id: fullfillmentCenter
+      title: "Preface"
+      contents:
+        - projects/posts/fullfillmentCenter.qmd
+        - projects/Greater Melbourne Distribution Center Landscape/analysis.qmd
+        - projects/Greater Melbourne Distribution Center Landscape/populationDensity.qmd
+        - projects/Greater Melbourne Distribution Center Landscape/warehouseLocations.qmd
+    # - id: scorecard
+    #   title: "Scorecard for Australian Mortgage"
+    #   contents:
+    #     - posts/blog/index.qmd
+    #     - posts/blog/post1.qmd
   
   page-footer: 
     center: This website is built with [Quarto](https://quarto.org/docs/websites/) and hosted on [Github Pages](https://pages.github.com)

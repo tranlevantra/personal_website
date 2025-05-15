@@ -1,0 +1,6 @@
+sidebar: fullfillmentCenter
+page-layout: article
+format:
+  html:
+    toc: true
+    toc-location: right
