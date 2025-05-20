@@ -129,7 +129,7 @@ points_sf
 
 ### 3. Recreate the plot
 
-My data processing stage results in [`SA1_count_shapefile`](resources/SA1_count_shapefile/SA1_count_shapefile.shp) and the sampling density dots process results in [`points_sf`](resources/points_sf/points_sf.shp)
+My data processing stage results in [`SA1_count_shapefile`](https://github.com/tranlevantra/personal_website/blob/main/projects/Greater%20Melbourne%20Distribution%20Center%20Landscape/resources/SA1_count_shapefile.zip) and the sampling density dots process results in [`points_sf`](https://github.com/tranlevantra/personal_website/blob/main/projects/Greater%20Melbourne%20Distribution%20Center%20Landscape/resources/points_sf.zip)
 
 Below is the code to recreate the plot at the beginning of this post
 
