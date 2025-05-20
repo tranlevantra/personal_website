@@ -21,6 +21,11 @@ tags:
   - ROC AUC
   - calibration metrics
   - reliability plot
+  
+format:
+    html: 
+      grid: 
+        margin-width: 350px
 ---
 
 *Thank you, [Asma Ali](https://www.linkedin.com/in/asma-asim-ali/) and [Thomas Bui](https://www.linkedin.com/in/thomas-bui-9142561b7?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8FRPTrJTQvCPpotNfIaURA%3D%3D) for your insightful feedback*
@@ -93,7 +98,7 @@ Some of the most common calibration metrics are:
 
 While the above metrics are useful for evaluating a model’s overall calibration, they don’t reveal how the model performs on each class individually. That’s why visualising predicted probabilities against actual class labels — as done in a reliability diagram (example in Figure 1 below)— is essential for uncovering insights that metrics alone might miss.
 
-![Figure 1: The negative class (0) shows good calibration, with predicted probabilities tightly clustered around the actual class label. In contrast, the positive class (1) shows poorer calibration, with greater variability](figures/calibration.png){width="80%" alt-text=""}
+![Figure 1. The negative class (0) shows good calibration, with predicted probabilities tightly clustered around the actual class label. In contrast, the positive class (1) shows poorer calibration, with greater variability.](figures/calibration.png){width="80%" alt-text=""}
 
 ### Accuracy Metrics
 

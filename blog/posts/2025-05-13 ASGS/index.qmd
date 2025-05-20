@@ -14,6 +14,10 @@ tags:
   - spatial analysis
   - mapview
   - R
+
+format:
+  html:
+    code-tools: true
 ---
 
 ## Overview
@@ -21,7 +25,7 @@ tags:
 The **Main Structure** of Australian Statistical Geography Standard (ASGS) ${3}^{th}$ Edition has **7 levels**, and is developed based on the concept of a functional area - an area within which many people commute or travel to access services.
 
 | **Geographic Level** | **Population Range** | **Composition** | **Primary Use** |
-|----------------|----------------|--------------------|---------------------|
+|-----------------|-----------------|-------------------|--------------------|
 | Mesh Block (MB) | 30–60 dwellings | Smallest classification with 368,286 units | Foundation for all ASGS levels |
 | Statistical Area Level 1 (SA1) | 200–800 people | Built from 61,845 Mesh Blocks | Detailed Census dissemination |
 | Statistical Area Level 2 (SA2) | 3,000–25,000 people | Built from 2,475 SA1s | Community health & service stats |
@@ -38,82 +42,132 @@ Below interactive map gives examples of how higher level aggregations are built 
 
 While Greater Capital City Statistical Areas (GCCSA) are not a part of the ASGS, they are built from SA4s, and are used to provide a more detailed understanding of the population distribution and characteristics within major urban areas of State and Territory.
 
-::: {.panel-tabset}
-
+::: panel-tabset
 ## Overview
 
 <figure>
-  <iframe src="fig/overview.html" width="100%" height="300px" style="border:none;"></iframe>
-  <figcaption style="text-align: center; font-size: 0.9em; color: gray;">
-    An overview of the Main Structure. Filter map layers and Adjust zoom in-out options for better understanding.
-  </figcaption>
+
+<iframe src="fig/overview.html" width="100%" height="300px" style="border:none;">
+
+</iframe>
+
+<figcaption style="text-align: center; font-size: 0.9em; color: gray;">
+
+An overview of the Main Structure. Filter map layers and Adjust zoom in-out options for better understanding.
+
+</figcaption>
+
 </figure>
 
 ## Mesh Block
 
 <figure>
-  <iframe src="fig/meshblock.html" width="100%" height="300px" style="border:none;"></iframe>
-  <figcaption style="text-align: center; font-size: 0.9em; color: gray;">
-    North Melbourne's Mesh Block agregations.
-  </figcaption>
+
+<iframe src="fig/meshblock.html" width="100%" height="300px" style="border:none;">
+
+</iframe>
+
+<figcaption style="text-align: center; font-size: 0.9em; color: gray;">
+
+North Melbourne's Mesh Block agregations.
+
+</figcaption>
+
 </figure>
 
 ## SA1
 
 <figure>
-  <iframe src="fig/SA1.html" width="100%" height="300px" style="border:none;"></iframe>
-  <figcaption style="text-align: center; font-size: 0.9em; color: gray;">
-    North Melbourne's SA1 agregations.
-  </figcaption>
-</figure>
 
+<iframe src="fig/SA1.html" width="100%" height="300px" style="border:none;">
+
+</iframe>
+
+<figcaption style="text-align: center; font-size: 0.9em; color: gray;">
+
+North Melbourne's SA1 agregations.
+
+</figcaption>
+
+</figure>
 
 ## SA2
 
 <figure>
-  <iframe src="fig/SA2.html" width="100%" height="300px" style="border:none;"></iframe>
-  <figcaption style="text-align: center; font-size: 0.9em; color: gray;">
-    Melbourne City's SA2 agregrations.
-  </figcaption>
-</figure>
 
+<iframe src="fig/SA2.html" width="100%" height="300px" style="border:none;">
+
+</iframe>
+
+<figcaption style="text-align: center; font-size: 0.9em; color: gray;">
+
+Melbourne City's SA2 agregrations.
+
+</figcaption>
+
+</figure>
 
 ## SA3
 
 <figure>
-  <iframe src="fig/SA3.html" width="100%" height="300px" style="border:none;"></iframe>
-  <figcaption style="text-align: center; font-size: 0.9em; color: gray;">
-    Melbourne-Inner's SA3 agregrations.
-  </figcaption>
+
+<iframe src="fig/SA3.html" width="100%" height="300px" style="border:none;">
+
+</iframe>
+
+<figcaption style="text-align: center; font-size: 0.9em; color: gray;">
+
+Melbourne-Inner's SA3 agregrations.
+
+</figcaption>
+
 </figure>
 
-
-## SA4  
+## SA4
 
 <figure>
-  <iframe src="fig/SA4.html" width="100%" height="300px" style="border:none;"></iframe>
-  <figcaption style="text-align: center; font-size: 0.9em; color: gray;">
-    Greater Melbourne's SA4 agregrations.
-  </figcaption>
+
+<iframe src="fig/SA4.html" width="100%" height="300px" style="border:none;">
+
+</iframe>
+
+<figcaption style="text-align: center; font-size: 0.9em; color: gray;">
+
+Greater Melbourne's SA4 agregrations.
+
+</figcaption>
+
 </figure>
 
 ## GCCSA
 
 <figure>
-  <iframe src="fig/GCCSA.html" width="100%" height="300px" style="border:none;"></iframe>
-  <figcaption style="text-align: center; font-size: 0.9em; color: gray;">
-    Victoria' GCCSA aggregations involve Greater Melbourne and Rest of Victoria.
-  </figcaption>
+
+<iframe src="fig/GCCSA.html" width="100%" height="300px" style="border:none;">
+
+</iframe>
+
+<figcaption style="text-align: center; font-size: 0.9em; color: gray;">
+
+Victoria' GCCSA aggregations involve Greater Melbourne and Rest of Victoria.
+
+</figcaption>
+
 </figure>
 
 ## State/Territory
 
 <figure>
-  <iframe src="fig/STE.html" width="100%" height="300px" style="border:none;"></iframe>
-  <figcaption style="text-align: center; font-size: 0.9em; color: gray;">
-    Australia's State/Territory agregations involve 8 States and 1 Other Territory (OT).
-  </figcaption>
+
+<iframe src="fig/STE.html" width="100%" height="300px" style="border:none;">
+
+</iframe>
+
+<figcaption style="text-align: center; font-size: 0.9em; color: gray;">
+
+Australia's State/Territory agregations involve 8 States and 1 Other Territory (OT).
+
+</figcaption>
+
 </figure>
-
 :::
-

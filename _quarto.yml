@@ -19,13 +19,23 @@ website:
         icon: github
         
   sidebar:
-    - id: fullfillmentCenter
-      title: "Preface"
+      id: fullfillmentCenter
+      title: "Distribution Center Project"
+      style: docked
       contents:
-        - projects/posts/fullfillmentCenter.qmd
-        - projects/Greater Melbourne Distribution Center Landscape/analysis.qmd
-        - projects/Greater Melbourne Distribution Center Landscape/populationDensity.qmd
-        - projects/Greater Melbourne Distribution Center Landscape/warehouseLocations.qmd
+        - section: "Report"
+          contents:
+            - text: "1. Project Overview"
+              file: projects/posts/fullfillmentCenter.qmd
+            - text: "2. Analysis"
+              file: projects/Greater Melbourne Distribution Center Landscape/analysis.qmd
+        - section: "How I built this"
+          contents:
+            - text: "1. Population Density Dot Plot"
+              file: projects/Greater Melbourne Distribution Center Landscape/populationDensity.qmd
+            - text: "2. Warehouse Locations Leaflet Map"
+              file: projects/Greater Melbourne Distribution Center Landscape/warehouseLocations.qmd
+        
     # - id: scorecard
     #   title: "Scorecard for Australian Mortgage"
     #   contents:

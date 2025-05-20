@@ -4,7 +4,7 @@
     "href": "blog/index.html",
     "title": "Welcome to my Blog",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nThe Main Structure of Australian Statistical Geography Standard (ASGS) Third Edition\n\n\n\n\n\nA framework to collect, analyse and disseminate statistical data based on social geography - the distribution of people and communities, rather than administrative bounderies\n\n\n\n\n\nMay 13, 2025\n\n\nTra Tran\n\n\n3 min\n\n\n\n\n\n\n\n\n\n\n\n\nI photoshoped my Testamur\n\n\n\n\n\n\n\n\n\n\n\nDecember 18, 2024\n\n\nTra Tran\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\nOn model performance assessment in binary classification tasks\n\n\n\n\n\nA reflection on the often-neglected aspects of model performance assessment in binary classification tasks\n\n\n\n\n\nDecember 11, 2024\n\n\nTra Tran\n\n\n6 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nThe Main Structure of Australian Statistical Geography Standard (ASGS) Third Edition\n\n\n\n\n\nA framework to collect, analyse and disseminate statistical data based on social geography - the distribution of people and communities, rather than administrative bounderies\n\n\n\n\n\nMay 13, 2025\n\n\nTra Tran\n\n\n2 min\n\n\n\n\n\n\n\n\n\n\n\n\nI photoshoped my Testamur\n\n\n\n\n\n\n\n\n\n\n\nDecember 18, 2024\n\n\nTra Tran\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\nOn model performance assessment in binary classification tasks\n\n\n\n\n\nA reflection on the often-neglected aspects of model performance assessment in binary classification tasks\n\n\n\n\n\nDecember 11, 2024\n\n\nTra Tran\n\n\n6 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "home/index.html",
@@ -39,7 +39,7 @@
     "href": "blog/posts/2024-12-11 decision threshold/index.html#unpopular-opinions-on-binary-classification-assessment",
     "title": "On model performance assessment in binary classification tasks",
     "section": "Unpopular Opinions on Binary Classification Assessment",
-    "text": "Unpopular Opinions on Binary Classification Assessment\n\nCalibration is an often-neglected aspect when assessing the performance of classification models\nAccuracy is just one of many evaluation metrics — a high accuracy alone doesn’t guarantee good real-world performance, especially in imbalanced datasets.\nWhile ROC curves are helpful for sensitivity analysis and threshold selection, interpreting them isn’t always straightforward, particularly when misclassification costs are unequal.\n\n\nCalibration metrics\nCalibration metrics in classification tasks evaluate how close the model’s predicted probabilities are to the true class labels (0 or 1), indicating the model’s reliability in estimating probabilities.\nFor example, in healthcare applications, a well-calibrated model would assign probabilities that closely reflect the true likelihood of disease presence or absence.\nSome of the most common calibration metrics are:\n\nThe mean squared difference between predicted probabilities and actual class labels.\n\\[\n\\text{Brier Score} = \\frac{1}{n} \\sum_{i=1}^{n} (P_i - o_i)^2\n\\]\nThe negative log-likelihood of the predicted probabilities given the actual class labels.\n\\[\n\\text{Log Loss} = -\\frac{1}{n} \\sum_{i=1}^{n} \\left[ o_i \\log(P_i) + (1 - o_i) \\log(1 - P_i) \\right]\n\\]\nThe root mean squared difference between predicted probabilities and actual class labels.\n\\[\n\\text{RMS Calibration Error} = \\sqrt{ \\frac{1}{n} \\sum_{i=1}^{n} (P_i - o_i)^2 }\n\\]\n\nWhile the above metrics are useful for evaluating a model’s overall calibration, they don’t reveal how the model performs on each class individually. That’s why visualising predicted probabilities against actual class labels — as done in a reliability diagram (example in Figure 1 below)— is essential for uncovering insights that metrics alone might miss.\n\n\n\nFigure 1: The negative class (0) shows good calibration, with predicted probabilities tightly clustered around the actual class label. In contrast, the positive class (1) shows poorer calibration, with greater variability\n\n\n\n\nAccuracy Metrics\nThese metrics are calculated after converting predicted probabilities to class labels (0 or 1) using the decision threshold.\n\nAccuracy: \\(\\frac{TP + TN}{TP + TN + FP + FN}\\)\nSensitivity (True Positive Rate, Recall): \\(\\frac{TP}{TP + FN}\\)\nSpecificity (True Negative Rate): \\(\\frac{TN}{TN + FP}\\)\nPrecision (Positive Predictive Value): \\(\\frac{TP}{TP + FP}\\)\nFalse Positive Rate (FPR): \\(\\frac{FP}{FP + TN}\\)\nF1 Score: \\(2 \\cdot \\frac{\\text{Precision} \\cdot \\text{Recall}}{\\text{Precision} + \\text{Recall}}\\)\nBalanced Accuracy: \\(\\frac{\\text{Sensitivity} + \\text{Specificity}}{2}\\)\nAnd many more …\n\nThese metrics give a fuller picture than accuracy alone, especially in imbalanced datasets where the number of instances in one class outweighs the other.\nFor example, in a breast cancer classification dataset where 90% of the instances are cancer-free (class 0) and only 10% have cancer (class 1), a model that predicts everyone to be cancer-free would still achieve 90% accuracy. However, such a model would be useless, as it fails to identify any actual cancer cases.\n\n\n\nFigure 2: An example of model performance on test data at the commonly used threshold of 0.5. The model achieves 90% accuracy but fails to detect the single positive case.\n\n\n\n\nSensitivity analysis\nROC Curve plots the true positive rate (sensitivity) against the false positive rate (1 - specificity) at various thresholds to reveal how sensitive the model is to changes in the decision threshold for each class.\n\n\n\nFigure 3: This ROC curve suggests the model performs poorly across most thresholds. It only identifies positives at very low thresholds, with a high false positive rate. Overall, the model struggles to separate the classes effectively\n\n\nThe optimal decision threshold is often chosen near the top-left corner of the ROC curve, where sensitivity and specificity are balanced. However, this assumes equal costs for false positives and false negatives — which is rarely the case.\nIn breast cancer screening, for example, missing a cancer case (false negative) is more serious than flagging a healthy person (false positive). In such cases, the threshold is lowered to prioritize detecting positives, making ROC interpretation less straightforward.\nFigure 4 shows the same model as in Figure 3, with reliability diagram and a confusion matrix that updates with the threshold — making it easier to see how model’s performance changes.\n\n\n\nFigure 4: From the reliability diagram, varying the threshold dynamically reveals how lowering it reduce false negatives while increase false positives. The confusion matrix further highlights how sensitive the two classes are to changes in threshold"
+    "text": "Unpopular Opinions on Binary Classification Assessment\n\nCalibration is an often-neglected aspect when assessing the performance of classification models\nAccuracy is just one of many evaluation metrics — a high accuracy alone doesn’t guarantee good real-world performance, especially in imbalanced datasets.\nWhile ROC curves are helpful for sensitivity analysis and threshold selection, interpreting them isn’t always straightforward, particularly when misclassification costs are unequal.\n\n\nCalibration metrics\nCalibration metrics in classification tasks evaluate how close the model’s predicted probabilities are to the true class labels (0 or 1), indicating the model’s reliability in estimating probabilities.\nFor example, in healthcare applications, a well-calibrated model would assign probabilities that closely reflect the true likelihood of disease presence or absence.\nSome of the most common calibration metrics are:\n\nThe mean squared difference between predicted probabilities and actual class labels.\n\\[\n\\text{Brier Score} = \\frac{1}{n} \\sum_{i=1}^{n} (P_i - o_i)^2\n\\]\nThe negative log-likelihood of the predicted probabilities given the actual class labels.\n\\[\n\\text{Log Loss} = -\\frac{1}{n} \\sum_{i=1}^{n} \\left[ o_i \\log(P_i) + (1 - o_i) \\log(1 - P_i) \\right]\n\\]\nThe root mean squared difference between predicted probabilities and actual class labels.\n\\[\n\\text{RMS Calibration Error} = \\sqrt{ \\frac{1}{n} \\sum_{i=1}^{n} (P_i - o_i)^2 }\n\\]\n\nWhile the above metrics are useful for evaluating a model’s overall calibration, they don’t reveal how the model performs on each class individually. That’s why visualising predicted probabilities against actual class labels — as done in a reliability diagram (example in Figure 1 below)— is essential for uncovering insights that metrics alone might miss.\n\n\n\nFigure 1. The negative class (0) shows good calibration, with predicted probabilities tightly clustered around the actual class label. In contrast, the positive class (1) shows poorer calibration, with greater variability.\n\n\n\n\nAccuracy Metrics\nThese metrics are calculated after converting predicted probabilities to class labels (0 or 1) using the decision threshold.\n\nAccuracy: \\(\\frac{TP + TN}{TP + TN + FP + FN}\\)\nSensitivity (True Positive Rate, Recall): \\(\\frac{TP}{TP + FN}\\)\nSpecificity (True Negative Rate): \\(\\frac{TN}{TN + FP}\\)\nPrecision (Positive Predictive Value): \\(\\frac{TP}{TP + FP}\\)\nFalse Positive Rate (FPR): \\(\\frac{FP}{FP + TN}\\)\nF1 Score: \\(2 \\cdot \\frac{\\text{Precision} \\cdot \\text{Recall}}{\\text{Precision} + \\text{Recall}}\\)\nBalanced Accuracy: \\(\\frac{\\text{Sensitivity} + \\text{Specificity}}{2}\\)\nAnd many more …\n\nThese metrics give a fuller picture than accuracy alone, especially in imbalanced datasets where the number of instances in one class outweighs the other.\nFor example, in a breast cancer classification dataset where 90% of the instances are cancer-free (class 0) and only 10% have cancer (class 1), a model that predicts everyone to be cancer-free would still achieve 90% accuracy. However, such a model would be useless, as it fails to identify any actual cancer cases.\n\n\n\nFigure 2: An example of model performance on test data at the commonly used threshold of 0.5. The model achieves 90% accuracy but fails to detect the single positive case.\n\n\n\n\nSensitivity analysis\nROC Curve plots the true positive rate (sensitivity) against the false positive rate (1 - specificity) at various thresholds to reveal how sensitive the model is to changes in the decision threshold for each class.\n\n\n\nFigure 3: This ROC curve suggests the model performs poorly across most thresholds. It only identifies positives at very low thresholds, with a high false positive rate. Overall, the model struggles to separate the classes effectively\n\n\nThe optimal decision threshold is often chosen near the top-left corner of the ROC curve, where sensitivity and specificity are balanced. However, this assumes equal costs for false positives and false negatives — which is rarely the case.\nIn breast cancer screening, for example, missing a cancer case (false negative) is more serious than flagging a healthy person (false positive). In such cases, the threshold is lowered to prioritize detecting positives, making ROC interpretation less straightforward.\nFigure 4 shows the same model as in Figure 3, with reliability diagram and a confusion matrix that updates with the threshold — making it easier to see how model’s performance changes.\n\n\n\nFigure 4: From the reliability diagram, varying the threshold dynamically reveals how lowering it reduce false negatives while increase false positives. The confusion matrix further highlights how sensitive the two classes are to changes in threshold"
   },
   {
     "objectID": "blog/posts/2024-12-11 decision threshold/index.html#some-notes",
@@ -242,9 +242,10 @@
     "href": "projects/posts/fullfillmentCenter.html",
     "title": "Fullfillment Centers in Greater Melbourne",
     "section": "",
-    "text": "My mentor, with 40 years in U.S. warehousing, once said, “The industry used to be simple—everything was routine—and universal: whether in Vietnam or the U.S., it was always ‘safety first, everything else follows.’ That is, until e-commerce became a thing.”\nThe Covid-19 pandemic further nurtured online shopping habits, made uncertainty the norm, and accelerated the adoption of automation and robotics to take over labor-intensive roles in warehouse operations.\nAs someone with warehousing experience in Vietnam, new to Melbourne post-Covid, and hooked on online shopping, this project is my attempt to explore the Australian warehousing industry and understand how the pandemic has reshaped it.",
+    "text": "My mentor, with 40 years in U.S. warehousing, once said, “The industry used to be simple—everything was routine—and universal: whether in Vietnam or the U.S., it was always ‘safety first, everything else follows.’ That is, until e-commerce became a thing.”\nThe Covid-19 pandemic further nurtured online shopping habits, made uncertainty the norm, and accelerated the adoption of automation and robotics to take over human roles inside the warehouse.\nAs someone with warehousing experience in Vietnam, new to Melbourne post-Covid, and hooked on online shopping, this project is my attempt to explore the Australian warehousing industry and understand how the pandemic has reshaped it.",
     "crumbs": [
-      "Fullfillment Centers in Greater Melbourne"
+      "Report",
+      "1. Project Overview"
     ]
   },
   {
@@ -252,9 +253,10 @@
     "href": "projects/posts/fullfillmentCenter.html#preface",
     "title": "Fullfillment Centers in Greater Melbourne",
     "section": "",
-    "text": "My mentor, with 40 years in U.S. warehousing, once said, “The industry used to be simple—everything was routine—and universal: whether in Vietnam or the U.S., it was always ‘safety first, everything else follows.’ That is, until e-commerce became a thing.”\nThe Covid-19 pandemic further nurtured online shopping habits, made uncertainty the norm, and accelerated the adoption of automation and robotics to take over labor-intensive roles in warehouse operations.\nAs someone with warehousing experience in Vietnam, new to Melbourne post-Covid, and hooked on online shopping, this project is my attempt to explore the Australian warehousing industry and understand how the pandemic has reshaped it.",
+    "text": "My mentor, with 40 years in U.S. warehousing, once said, “The industry used to be simple—everything was routine—and universal: whether in Vietnam or the U.S., it was always ‘safety first, everything else follows.’ That is, until e-commerce became a thing.”\nThe Covid-19 pandemic further nurtured online shopping habits, made uncertainty the norm, and accelerated the adoption of automation and robotics to take over human roles inside the warehouse.\nAs someone with warehousing experience in Vietnam, new to Melbourne post-Covid, and hooked on online shopping, this project is my attempt to explore the Australian warehousing industry and understand how the pandemic has reshaped it.",
     "crumbs": [
-      "Fullfillment Centers in Greater Melbourne"
+      "Report",
+      "1. Project Overview"
     ]
   },
   {
@@ -345,10 +347,11 @@
     "href": "projects/Greater Melbourne Distribution Center Landscape/analysis.html",
     "title": "Findings and Analysis",
     "section": "",
-    "text": "Terminology\n\n\n\n\n\n\n\nFulfillment centers are specialized warehouses that store finished products and handle picking, packing, and shipping—either to retail stores or directly to customers.\n\n\n\n\nStrategic location: Often near transport hubs and densely populated areas to ensure fast, efficient delivery to end customers.\nHigh scalability: Designed to handle large, fluctuating volumes of small-parcel, multi-item orders shipped to geographically dispersed destinations. Advanced technology and automation are often required to maintain speed and accuracy.\n\n\n\n\n\n3PL (Third-Party Logistics):\nOperated by logistics providers, offering warehousing and order fulfillment services to multiple companies — ideal for small e-commerce businesses without in-house logistics capabilities.\nIn-House:\nManaged by the product-selling company itself, typically used by large retailers or brands with high order volumes and their own delivery team for better control over operations.",
+    "text": "Terminology alert!!!\n\n\n\n\n\n\n\nFulfillment centers are specialised warehouses that store finished products and prepare, pack, and ship customer orders - typically for e-commerce - either directly to consumers or to retail stores.\n\n\n\n\nStrategic location: Often near transport hubs and densely populated areas to ensure fast, efficient delivery to end customers.\nHigh scalability: Designed to handle large, fluctuating volumes of small-parcel, multi-item orders shipped to geographically dispersed destinations. Advanced technology and automation are often required to maintain speed and accuracy.\n\n\n\n\n\n3PL (Third-Party Logistics):\nOperated by logistics providers, offering warehousing and order fulfillment services to multiple companies — ideal for small e-commerce businesses without in-house logistics capabilities.\nIn-House:\nManaged by the product-selling company itself, typically used by large retailers or brands with high order volumes and their own delivery team for better control over operations.",
     "crumbs": [
       "Home",
-      "Findings and Analysis"
+      "Report",
+      "2. Analysis"
     ]
   },
   {
@@ -370,7 +373,8 @@
     "text": "Findings\n\n\nNote: Information on fulfillment centers in Greater Melbourne was collected through manual searches on Google Maps, company website visits, news articles, and LinkedIn posts. The data is not exhaustive and may not represent the complete landscape of fulfillment centers in the region.",
     "crumbs": [
       "Home",
-      "Findings and Analysis"
+      "Report",
+      "2. Analysis"
     ]
   },
   {
@@ -378,32 +382,130 @@
     "href": "projects/Greater Melbourne Distribution Center Landscape/analysis.html#analysis",
     "title": "Findings and Analysis",
     "section": "Analysis",
-    "text": "Analysis\n\nAs the pandemic exposed the risks of outsourcing, more in-house fulfillment centers are being built. Major supermarket chains such as Coles, Woolworths, and MetCash-IGA only began developing their own distribution centers after COVID-19. Coles, for instance, relied on Linfox as its 3PL provider in 2018 but is now constructing its first in-house, fully automated facility in Melbourne. Among established names, only Aldi had its own center as early as 2010—its market-leading position highlights the benefits of full supply chain control.\nDespite the e-commerce boom, the 3PL market remains heavily dominated by Amazon, which continues to expand with mega fulfillment centers.\nFully automated fulfillment centers are becoming the norm, with new warehouses built by large, well-capitalized players like Amazon and Coles. These technologies are often out of reach for smaller operators, raising market barriers for new entrants.\nAltona, Laverton North, and Truganina remain key warehousing hubs, supported by ample land reserves for ongoing industrial development.",
+    "text": "Analysis\n\nAs the pandemic exposed the risks of outsourcing, more in-house fulfillment centers are being built. Major supermarket chains such as Coles, Woolworths, and MetCash-IGA only began developing their own distribution centers after COVID-19. Coles, for instance, relied on Linfox as its 3PL provider in 2018 but is now constructing its first in-house, fully automated facility in Melbourne. Among established names, only Aldi had its own center as early as 2010—its market-leading position highlights the benefits of taking full control over the supply chain.\nDespite the e-commerce boom, the 3PL market remains heavily dominated by Amazon, which continues to expand with mega fulfillment centers.\nFully automated fulfillment centers are becoming the norm, with new warehouses built by large, well-capitalized players like Amazon and Coles. These technologies are often out of reach for smaller operators, raising market barriers for new entrants.\nAltona, Laverton North, and Truganina remain key warehousing hubs, supported by prime location and ample land reserves for ongoing industrial development.",
     "crumbs": [
       "Home",
-      "Findings and Analysis"
+      "Report",
+      "2. Analysis"
     ]
   },
   {
     "objectID": "projects/Greater Melbourne Distribution Center Landscape/warehouseLocations.html",
     "href": "projects/Greater Melbourne Distribution Center Landscape/warehouseLocations.html",
-    "title": "Fullfillment Center Locations",
+    "title": "Tra Tran",
     "section": "",
-    "text": "I ll do this tmr",
+    "text": "I ll do this tmr! I promise!",
     "crumbs": [
       "Home",
-      "Fullfillment Center Locations"
+      "How I built this",
+      "2. Warehouse Locations Leaflet Map"
     ]
   },
   {
     "objectID": "projects/Greater Melbourne Distribution Center Landscape/populationDensity.html",
     "href": "projects/Greater Melbourne Distribution Center Landscape/populationDensity.html",
-    "title": "Population Density",
+    "title": "Tra Tran",
     "section": "",
-    "text": "Stay tuned to know how I plot the population density dots on the map.",
+    "text": "format: html: toc: true toc-depth: 3 grid: margin-width: 200px\ncitation-location: margin reference-location: margin",
     "crumbs": [
       "Home",
-      "Population Density"
+      "How I built this",
+      "1. Population Density Dot Plot"
+    ]
+  },
+  {
+    "objectID": "projects/posts/fullfillmentCenter.html#terminology",
+    "href": "projects/posts/fullfillmentCenter.html#terminology",
+    "title": "Fullfillment Centers in Greater Melbourne",
+    "section": "Terminology",
+    "text": "Terminology\n\n1. Fulfillment Center\nFulfillment centers are specialised warehouses that store finished products and prepare, pack, and ship customer orders - typically for e-commerce - either directly to consumers or to retail stores.\n\n\n2. Key Characteristics of Fulfillment Centers\n\nStrategic location: Often near transport hubs and densely populated areas to ensure fast, efficient delivery to end customers.\nHigh scalability: Designed to handle large, fluctuating volumes of small-parcel, multi-item orders shipped to geographically dispersed destinations. Advanced technology and automation are often required to maintain speed and accuracy.\n\n\n\n3. Two Main Types of Fulfillment Centers\n\n3PL (Third-Party Logistics):\nOperated by logistics providers, offering warehousing and order fulfillment services to multiple companies — ideal for small e-commerce businesses without in-house logistics capabilities.\nIn-House:\nManaged by the product-selling company itself, typically used by large retailers or brands with high order volumes and their own delivery team for better control over operations.",
+    "crumbs": [
+      "Report",
+      "1. Project Overview"
+    ]
+  },
+  {
+    "objectID": "projects/Greater Melbourne Distribution Center Landscape/populationDensity.html#background",
+    "href": "projects/Greater Melbourne Distribution Center Landscape/populationDensity.html#background",
+    "title": "Population Density Dots",
+    "section": "",
+    "text": "While population data on Statistical Area Level 2 is commonly used for studying service delivery, fulfillment centers operate closer to the final stage of the logistics chain — delivering parcels to individual households. Because of this, population density at a finer scale (SA1 or Mesh Block) is more appropriate for identifying areas of concentrated demand.\n\n\n\n\n\n\nBefore we start!!!\n\n\n\n\n\nLet’s skim through this blog post to understand the seven levels of Australian Statistical Geography Standard (ASGS).\n\n\n\n\n1SA1_count_shapefile |&gt;\n  mutate(n_dots = floor(Person / 100))  |&gt;     \n2  filter(n_dots &gt; 0) |&gt;  st_sample(size =SA1_count_shapefile$n_dots) |&gt;\n3  st_sf() -&gt; points_sf\n\n\n1\n\nSA1_count_shapefile includes population counts and geometries for each SA1 block in Victoria.\n\n2\n\nn_dots is number of population dots in each SA1 polygon with each dot representing 100 people, calculated using floor(Person / 100). 100persons/dot is the chosen resolution, as most SA1 blocks have 200–800 people, resulting in 2–8 dots per block. Using floor() ensures we only create whole dots and do not overcount the population.\n\n3\n\nPopulation density dots are generated by sampling points within each SA1 polygon using the st_sample() function from sf package (see the function reference). To reduce computation time, we first remove SA1 blocks with zero population using filter(n_dots &gt; 0), since there’s no need to generate dots for empty areas.\n\n\n\n\n\n\nCode\nSA1_count_shapefile |&gt;\n  mutate(n_dots = floor(Person / 100))  |&gt; \n  filter(n_dots &gt; 0)\n\n\nSimple feature collection with 14987 features and 3 fields (with 1 geometry empty)\nGeometry type: MULTIPOLYGON\nDimension:     XY\nBounding box:  xmin: 140.9619 ymin: -38.90962 xmax: 149.9762 ymax: -33.98064\nGeodetic CRS:  GCS_GDA2020\n# A tibble: 14,987 × 4\n   SA1_COD     Person                                            geometry n_dots\n * &lt;chr&gt;        &lt;dbl&gt;                                  &lt;MULTIPOLYGON [°]&gt;  &lt;dbl&gt;\n 1 20101100101    437 (((143.8009 -37.55382, 143.8004 -37.55376, 143.800…      4\n 2 20101100102    183 (((143.7977 -37.55071, 143.7978 -37.55075, 143.798…      1\n 3 20101100105    382 (((143.8156 -37.5587, 143.8169 -37.55885, 143.8175…      3\n 4 20101100106    584 (((143.801 -37.55383, 143.8024 -37.55399, 143.8032…      5\n 5 20101100107    363 (((143.8129 -37.55643, 143.813 -37.5561, 143.8132 …      3\n 6 20101100108    792 (((143.8089 -37.55476, 143.809 -37.55478, 143.8102…      7\n 7 20101100109    528 (((143.8044 -37.55316, 143.8046 -37.55213, 143.804…      5\n 8 20101100110    512 (((143.7886 -37.54654, 143.7882 -37.54637, 143.786…      5\n 9 20101100111    371 (((143.7923 -37.54826, 143.7922 -37.54849, 143.792…      3\n10 20101100112    424 (((143.7918 -37.5514, 143.7917 -37.55106, 143.7916…      4\n# ℹ 14,977 more rows\n\n\n\n… while its output should look like this:\n\n\n\nCode\npoints_sf\n\n\nSimple feature collection with 57470 features and 1 field\nGeometry type: POINT\nDimension:     XY\nBounding box:  xmin: 141.0321 ymin: -38.87474 xmax: 149.7605 ymax: -34.12203\nGeodetic CRS:  GCS_GDA2020\n# A tibble: 57,470 × 2\n     FID             geometry\n   &lt;dbl&gt;          &lt;POINT [°]&gt;\n 1     0  (143.802 -37.55391)\n 2     1  (143.804 -37.55111)\n 3     2 (143.8023 -37.54956)\n 4     3 (143.8039 -37.55215)\n 5     4 (143.7962 -37.55324)\n 6     5 (143.8123 -37.56792)\n 7     6 (143.8129 -37.56038)\n 8     7 (143.8142 -37.56515)\n 9     8 (143.8009 -37.55428)\n10     9 (143.7993 -37.55614)\n# ℹ 57,460 more rows\n\n\n\n… and demo on plotting the dots using ggplot2:\n\n\n\nCode\nggplot() +\n  geom_sf(data = SA1_count_shapefile, fill = \"grey95\", color = \"white\", size = 0.1) +\n  geom_sf(data = points_sf, color = \"orange\", size = 0.3, alpha = 0.7) +\n  theme_minimal() +\n  labs(\n    title = \"Population Density in Victoria\",\n    subtitle = \"Each dot represents ~100 people\",\n    caption = \"Source: ABS Census Data\",\n    fill = \"Population\"\n  ) +\n  theme(\n    legend.position = \"none\",\n    plot.title = element_text(size = 16, face = \"bold\", hjust = 0.5),\n    plot.subtitle = element_text(size = 12, hjust = 0.5),\n    plot.caption = element_text(size = 8, hjust = 1)\n  )",
+    "crumbs": [
+      "Home",
+      "2. How I built this",
+      "2.1 Population Density"
+    ]
+  },
+  {
+    "objectID": "projects/Greater Melbourne Distribution Center Landscape/populationDensity.html#footnotes",
+    "href": "projects/Greater Melbourne Distribution Center Landscape/populationDensity.html#footnotes",
+    "title": "The Population Density Dots",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\n{r} #| echo: false SA1_count_shapefile↩︎",
+    "crumbs": [
+      "Home",
+      "2. How I built this",
+      "2.1 Population Density"
+    ]
+  },
+  {
+    "objectID": "projects/Greater Melbourne Distribution Center Landscape/populationDensity.html#note",
+    "href": "projects/Greater Melbourne Distribution Center Landscape/populationDensity.html#note",
+    "title": "Population Density Dots",
+    "section": "Note",
+    "text": "Note",
+    "crumbs": [
+      "Home",
+      "2. How I built this",
+      "2.1 Population Density"
+    ]
+  },
+  {
+    "objectID": "projects/Greater Melbourne Distribution Center Landscape/populationDensity.html#motivation",
+    "href": "projects/Greater Melbourne Distribution Center Landscape/populationDensity.html#motivation",
+    "title": "Tra Tran",
+    "section": "Motivation",
+    "text": "Motivation\n\n\n\n\n\n\nBefore we start!!!\n\n\n\n\n\nLet’s skim through this blog post to understand hierarchical structure of Australian Statistical Geography Standard (ASGS) 3th Edition.\n\n\n\nSA2-level population data is commonly used in urban planning to determine warehouse locations. However, fulfillment centers operate at the last-mile stage of the logistics chain, delivering directly to households and retail stores. Therefore, using finer-scale population data — at the SA1 or Mesh Block level — is more appropriate to determine their locations.\n\n\n\n\n\nLazrtek (2023) https://lazrtek.com/what-is-a-last-mile-delivery-vehicle\n\n\nThe yellow population dots in my report were built on SA1 level.",
+    "crumbs": [
+      "Home",
+      "How I built this",
+      "1. Population Density Dot Plot"
+    ]
+  },
+  {
+    "objectID": "projects/Greater Melbourne Distribution Center Landscape/populationDensity.html#inspiration",
+    "href": "projects/Greater Melbourne Distribution Center Landscape/populationDensity.html#inspiration",
+    "title": "Tra Tran",
+    "section": "Inspiration",
+    "text": "Inspiration\nMy inspiration comes from the map featured in Population and Housing in Regional Victoria 2020 Report. As far as I know, the original was created using ArcGIS - not open-source.\n\n\n\n\n\nPopulation density, Victoria 2016.\nDepartment of Environment, Land, Water and Planning (2020).\n\n\nWith some familiarity in R, dplyr, and sf packages — you can recreate similar dot-density plots at different statistical geography levels and resolutions, completely free of charge.",
+    "crumbs": [
+      "Home",
+      "How I built this",
+      "1. Population Density Dot Plot"
+    ]
+  },
+  {
+    "objectID": "projects/Greater Melbourne Distribution Center Landscape/populationDensity.html#execution",
+    "href": "projects/Greater Melbourne Distribution Center Landscape/populationDensity.html#execution",
+    "title": "Tra Tran",
+    "section": "Execution",
+    "text": "Execution\n\n1. Preparing data\n\n\n\n\n\n\nResources (to work with spatial vector data in R)\n\n\n\n\n\nWorking with tabular data using dplyr package is straightforward, |&gt; pipe operators and these functions: mutate, select, filter and group_by along with 4 types of join should get you far.\nAn sf object from sf package extends regular tabular data frames to include a geometry column, which contains the spatial information. Thus, a simple explanation on how to read shapefiles with sf should be enough to get you started. Then, those mentioned dplyr functions will come in handy.\n\n\n\nThe Australian Bureau of Statistics (ABS) provides Population counts at the smallest level - Mesh Block, along with allocation file for mapping among levels, and shapefiles for each level. By joining these files, we can create a shapefile with population counts at any level.\n\n\n\n\n\n4 types of JOIN.\nTrust-me-bro (n.d.).\n\n\nOutput of this stage should be an sf object with multipolygon geometry and population count for each polygon.\n\nSA1_count_shapefile\n\nSimple feature collection with 15482 features and 2 fields (with 4 geometries empty)\nGeometry type: MULTIPOLYGON\nDimension:     XY\nBounding box:  xmin: 140.9619 ymin: -39.15918 xmax: 149.9762 ymax: -33.98064\nGeodetic CRS:  GCS_GDA2020\n# A tibble: 15,482 × 3\n   SA1_COD     Person                                                   geometry\n   &lt;chr&gt;        &lt;dbl&gt;                                         &lt;MULTIPOLYGON [°]&gt;\n 1 20101100101    437 (((143.8009 -37.55382, 143.8004 -37.55376, 143.8005 -37.5…\n 2 20101100102    183 (((143.7977 -37.55071, 143.7978 -37.55075, 143.7981 -37.5…\n 3 20101100105    382 (((143.8156 -37.5587, 143.8169 -37.55885, 143.8175 -37.55…\n 4 20101100106    584 (((143.801 -37.55383, 143.8024 -37.55399, 143.8032 -37.55…\n 5 20101100107    363 (((143.8129 -37.55643, 143.813 -37.5561, 143.8132 -37.555…\n 6 20101100108    792 (((143.8089 -37.55476, 143.809 -37.55478, 143.8102 -37.55…\n 7 20101100109    528 (((143.8044 -37.55316, 143.8046 -37.55213, 143.8048 -37.5…\n 8 20101100110    512 (((143.7886 -37.54654, 143.7882 -37.54637, 143.7866 -37.5…\n 9 20101100111    371 (((143.7923 -37.54826, 143.7922 -37.54849, 143.7922 -37.5…\n10 20101100112    424 (((143.7918 -37.5514, 143.7917 -37.55106, 143.7916 -37.55…\n# ℹ 15,472 more rows\n\n\n\n\n2. Generating population dots\nGenerating population dots involves\n\nChoosing a resolution (e.g., 1 dot = 100 people) and,\nSampling points within each polygon.\n\n\n1SA1_count_shapefile |&gt;\n2  dplyr::mutate(n_dots = floor(Person / 100))  |&gt;\n  dplyr::filter(n_dots &gt; 0) -&gt; SA_count_shapefile\n\n  \n3sf::st_sample(SA1_count_shapefile, size = SA1_count_shapefile$n_dots)|&gt;\n  sf::st_sf() -&gt; points_sf\n\n\n1\n\nSA1_count_shapefile includes both population counts and polygon for each SA1 block.\n\n2\n\nn_dots is the number of population dots to generate per SA1 polygon, calculated as floor(Person / 100). This resolution (1 dot = 100 people) is chosen because most SA1s have between 200 and 800 people, resulting in 2 to 8 dots per block. Using floor() ensures we only generate whole dots and prevents overcounting. To reduce computation time, we optionally apply filter(n_dots &gt; 0) to skip blocks with zero population.\n\n3\n\nPopulation dots are generated using st_sample(). The result is an sf object with one row per dot and a geometry column representing point locations.\n\n\n\n\n\npoints_sf\n\nSimple feature collection with 57470 features and 1 field\nGeometry type: POINT\nDimension:     XY\nBounding box:  xmin: 141.0321 ymin: -38.87474 xmax: 149.7605 ymax: -34.12203\nGeodetic CRS:  GCS_GDA2020\n# A tibble: 57,470 × 2\n     FID             geometry\n   &lt;dbl&gt;          &lt;POINT [°]&gt;\n 1     0  (143.802 -37.55391)\n 2     1  (143.804 -37.55111)\n 3     2 (143.8023 -37.54956)\n 4     3 (143.8039 -37.55215)\n 5     4 (143.7962 -37.55324)\n 6     5 (143.8123 -37.56792)\n 7     6 (143.8129 -37.56038)\n 8     7 (143.8142 -37.56515)\n 9     8 (143.8009 -37.55428)\n10     9 (143.7993 -37.55614)\n# ℹ 57,460 more rows\n\n\n\n\n3. Recreate the plot\nMy data processing stage results in SA1_count_shapefile and the sampling density dots process results in points_sf\nBelow is the code to recreate the plot at the beginning of this post\n\nlibrary(ggplot2)\nlibrary(ggtext)  \n\nggplot() +\n  geom_sf(data = SA1_count_shapefile, fill = \"grey95\", color = \"white\", size = 0.1) +\n  geom_sf(data = points_sf, color = \"orange\", size = 0.3, alpha = 0.7) +\n  theme_minimal() +\n  labs(\n    title = \"Population Density in Victoria\",\n    subtitle = \"Each &lt;span style='color:orange'&gt;&#9679;&lt;/span&gt; = 100 people\",\n    caption = \"Source: ABS Census Data 2021\"\n  ) +\n  theme(\n    legend.position = \"none\",\n    plot.title = element_text(size = 16, face = \"bold\", hjust = 0.5),\n    plot.subtitle = element_markdown(size = 12, hjust = 0.5),\n    plot.caption = element_text(size = 9, hjust = 1)\n  )",
+    "crumbs": [
+      "Home",
+      "How I built this",
+      "1. Population Density Dot Plot"
+    ]
+  },
+  {
+    "objectID": "projects/Greater Melbourne Distribution Center Landscape/populationDensity.html#population-dot-sampling-method",
+    "href": "projects/Greater Melbourne Distribution Center Landscape/populationDensity.html#population-dot-sampling-method",
+    "title": "Tra Tran",
+    "section": "Population Dot Sampling Method",
+    "text": "Population Dot Sampling Method\n\nSA1_count_shapefile includes both population counts and geometries for each SA1 block in Victoria.\nn_dots is the number of population dots to generate per SA1 polygon, calculated as floor(Person / 100). This resolution (1 dot = 100 people) is chosen because most SA1s have between 200 and 800 people, resulting in 2 to 8 dots per block. Using floor() ensures we only generate whole dots and prevents overcounting. To reduce computation time, we optionally apply filter(n_dots &gt; 0) to skip blocks with zero population.\nThe population dots are created using the st_sample() function from the sf package, which randomly samples points within each polygon. The result is an sf object with one row per dot, and a geometry column containing the coordinates of each sampled point.\n\n\n\nSimple feature collection with 57470 features and 1 field\nGeometry type: POINT\nDimension:     XY\nBounding box:  xmin: 141.0321 ymin: -38.87474 xmax: 149.7605 ymax: -34.12203\nGeodetic CRS:  GCS_GDA2020\n# A tibble: 57,470 × 2\n     FID             geometry\n   &lt;dbl&gt;          &lt;POINT [°]&gt;\n 1     0  (143.802 -37.55391)\n 2     1  (143.804 -37.55111)\n 3     2 (143.8023 -37.54956)\n 4     3 (143.8039 -37.55215)\n 5     4 (143.7962 -37.55324)\n 6     5 (143.8123 -37.56792)\n 7     6 (143.8129 -37.56038)\n 8     7 (143.8142 -37.56515)\n 9     8 (143.8009 -37.55428)\n10     9 (143.7993 -37.55614)\n# ℹ 57,460 more rows\n\n\n\n3. Recreate the plot\nMy data processing stage results in SA1_count_shapefile and the sampling density dots process results in points_sf\nThis is the code to recreate the plot at the beginning of this post with ggplot2\n\nrequire(ggplot2)\nrequire(sf)\n\nggplot() +\n  geom_sf(data = SA1_count_shapefile, fill = \"grey95\", color = \"white\", size = 0.1) +\n  geom_sf(data = points_sf, color = \"orange\", size = 0.3, alpha = 0.7) +\n  theme_minimal() +\n  labs(\n    title = \"Population Density in Victoria\",\n    subtitle = \"Each dot represents ~100 people\",\n    caption = \"Source: ABS Census Data\",\n    fill = \"Population\"\n  ) +\n  theme(\n    legend.position = \"none\",\n    plot.title = element_text(size = 16, face = \"bold\", hjust = 0.5),\n    plot.subtitle = element_text(size = 12, hjust = 0.5),\n    plot.caption = element_text(size = 8, hjust = 1)\n  )",
+    "crumbs": [
+      "Home",
+      "How I built this",
+      "1. Population Density Dot Plot"
     ]
   }
 ]

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Population Density – Tra Tran</title>
+<title>populationdensity – Tra Tran</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -71,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-sidebar docked nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -122,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../projects/Greater Melbourne Distribution Center Landscape/populationDensity.html">Population Density</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../projects/Greater Melbourne Distribution Center Landscape/populationDensity.html">How I built this</a></li><li class="breadcrumb-item"><a href="../../projects/Greater Melbourne Distribution Center Landscape/populationDensity.html">1. Population Density Dot Plot</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -131,66 +165,268 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Report</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../projects/posts/fullfillmentCenter.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fullfillment Centers in Greater Melbourne</span></a>
+ <span class="menu-text">1. Project Overview</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../projects/Greater Melbourne Distribution Center Landscape/analysis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Findings and Analysis</span></a>
+ <span class="menu-text">2. Analysis</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">How I built this</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../projects/Greater Melbourne Distribution Center Landscape/populationDensity.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Population Density</span></a>
+ <span class="menu-text">1. Population Density Dot Plot</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../projects/Greater Melbourne Distribution Center Landscape/warehouseLocations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fullfillment Center Locations</span></a>
+ <span class="menu-text">2. Warehouse Locations Leaflet Map</span></a>
   </div>
 </li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation">Motivation</a></li>
+  <li><a href="#inspiration" id="toc-inspiration" class="nav-link" data-scroll-target="#inspiration">Inspiration</a></li>
+  <li><a href="#execution" id="toc-execution" class="nav-link" data-scroll-target="#execution">Execution</a>
+  <ul class="collapse">
+  <li><a href="#preparing-data" id="toc-preparing-data" class="nav-link" data-scroll-target="#preparing-data">1. Preparing data</a></li>
+  <li><a href="#generating-population-dots" id="toc-generating-population-dots" class="nav-link" data-scroll-target="#generating-population-dots">2. Generating population dots</a></li>
+  <li><a href="#recreate-the-plot" id="toc-recreate-the-plot" class="nav-link" data-scroll-target="#recreate-the-plot">3. Recreate the plot</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Population Density</h1>
+
+
+
+<p><img src="fig/recreation.png" class="img-fluid" style="width:70.0%"></p>
+<section id="motivation" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="motivation">Motivation</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Before we start!!!">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Before we start!!!
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Let’s skim through this <a href="https://tranlevantra.github.io/personal_website/blog/posts/2025-05-13%20ASGS/">blog post</a> to understand hierarchical structure of Australian Statistical Geography Standard (ASGS) 3th Edition.</p>
+</div>
+</div>
+</div>
+<p>SA2-level population data is commonly used in urban planning to determine warehouse locations. However, fulfillment centers operate at the last-mile stage of the logistics chain, delivering directly to households and retail stores. Therefore, using finer-scale population data — at the SA1 or Mesh Block level — is more appropriate to determine their locations.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fig/last-mile-delivery-service.webp" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Lazrtek (2023) https://lazrtek.com/what-is-a-last-mile-delivery-vehicle</figcaption>
+</figure>
+</div>
+</div></div><p>The yellow population dots in my report were built on SA1 level.</p>
+</section>
+<section id="inspiration" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="inspiration">Inspiration</h2>
+<p>My inspiration comes from the map featured in <em>Population and Housing in Regional Victoria 2020 Report</em>. As far as I know, the original was created using ArcGIS - not open-source.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fig/inspiration.jpeg" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption><em>Population density, Victoria 2016</em>.<br>
+Department of Environment, Land, Water and Planning (2020).</figcaption>
+</figure>
+</div>
+</div></div><p>With some familiarity in R, <code>dplyr</code>, and <code>sf</code> packages — you can recreate similar dot-density plots at different statistical geography levels and resolutions, completely free of charge.</p>
+</section>
+<section id="execution" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="execution">Execution</h2>
+<section id="preparing-data" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="preparing-data">1. Preparing data</h3>
+<div class="callout callout-style-default callout-note callout-titled" title="Resources (to work with spatial vector data in R)">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Resources (to work with spatial vector data in R)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Working with tabular data using <code>dplyr</code> package is straightforward, <code>|&gt;</code> pipe operators and these functions: <a href="https://dplyr.tidyverse.org/reference/mutate.html"><code>mutate</code></a>, <a href="https://dplyr.tidyverse.org/reference/select.html"><code>select</code></a>, <a href="https://dplyr.tidyverse.org/reference/filter.html"><code>filter</code></a> and <a href="https://dplyr.tidyverse.org/reference/group_by.html"><code>group_by</code></a> along with 4 types of <a href="https://dplyr.tidyverse.org/reference/mutate-joins.html"><code>join</code></a> should get you far.</p>
+<p>An <code>sf</code> object from <code>sf</code> package extends regular tabular data frames to include a geometry column, which contains the spatial information. Thus, a simple explanation on <a href="https://r-graph-gallery.com/168-load-a-shape-file-into-r.html">how to read shapefiles</a> with <code>sf</code> should be enough to get you started. Then, those mentioned <code>dplyr</code> functions will come in handy.</p>
+</div>
+</div>
+</div>
+<p>The Australian Bureau of Statistics (ABS) provides Population counts at the smallest level - <a href="https://www.abs.gov.au/census/guide-census-data/mesh-block-counts/latest-release#data-download">Mesh Block</a>, along with <a href="https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/allocation-files">allocation file</a> for mapping among levels, and <a href="https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/digital-boundary-files">shapefiles</a> for each level. By joining these files, we can create a shapefile with population counts at any level.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fig/joins.webp" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption><em>4 types of JOIN</em>.<br>
+Trust-me-bro (n.d.).</figcaption>
+</figure>
+</div>
+</div></div><p>Output of this stage should be an <code>sf</code> object with multipolygon geometry and population count for each polygon.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>SA1_count_shapefile</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Simple feature collection with 15482 features and 2 fields (with 4 geometries empty)
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: 140.9619 ymin: -39.15918 xmax: 149.9762 ymax: -33.98064
+Geodetic CRS:  GCS_GDA2020
+# A tibble: 15,482 × 3
+   SA1_COD     Person                                                   geometry
+   &lt;chr&gt;        &lt;dbl&gt;                                         &lt;MULTIPOLYGON [°]&gt;
+ 1 20101100101    437 (((143.8009 -37.55382, 143.8004 -37.55376, 143.8005 -37.5…
+ 2 20101100102    183 (((143.7977 -37.55071, 143.7978 -37.55075, 143.7981 -37.5…
+ 3 20101100105    382 (((143.8156 -37.5587, 143.8169 -37.55885, 143.8175 -37.55…
+ 4 20101100106    584 (((143.801 -37.55383, 143.8024 -37.55399, 143.8032 -37.55…
+ 5 20101100107    363 (((143.8129 -37.55643, 143.813 -37.5561, 143.8132 -37.555…
+ 6 20101100108    792 (((143.8089 -37.55476, 143.809 -37.55478, 143.8102 -37.55…
+ 7 20101100109    528 (((143.8044 -37.55316, 143.8046 -37.55213, 143.8048 -37.5…
+ 8 20101100110    512 (((143.7886 -37.54654, 143.7882 -37.54637, 143.7866 -37.5…
+ 9 20101100111    371 (((143.7923 -37.54826, 143.7922 -37.54849, 143.7922 -37.5…
+10 20101100112    424 (((143.7918 -37.5514, 143.7917 -37.55106, 143.7916 -37.55…
+# ℹ 15,472 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="generating-population-dots" class="level3">
+<h3 class="anchored" data-anchor-id="generating-population-dots">2. Generating population dots</h3>
+<p>Generating population dots involves</p>
+<ul>
+<li><p>Choosing a resolution (e.g., 1 dot = 100 people) and,</p></li>
+<li><p>Sampling points within each polygon.</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-2"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-2-1" class="code-annotation-target"><a href="#annotated-cell-2-1" aria-hidden="true" tabindex="-1"></a>SA1_count_shapefile <span class="sc">|&gt;</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-2-2" class="code-annotation-target"><a href="#annotated-cell-2-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">n_dots =</span> <span class="fu">floor</span>(Person <span class="sc">/</span> <span class="dv">100</span>))  <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-2-3"><a href="#annotated-cell-2-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(n_dots <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="ot">-&gt;</span> SA_count_shapefile</span>
+<span id="annotated-cell-2-4"><a href="#annotated-cell-2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="annotated-cell-2-5"><a href="#annotated-cell-2-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-2-6" class="code-annotation-target"><a href="#annotated-cell-2-6" aria-hidden="true" tabindex="-1"></a>sf<span class="sc">::</span><span class="fu">st_sample</span>(SA1_count_shapefile, <span class="at">size =</span> SA1_count_shapefile<span class="sc">$</span>n_dots)<span class="sc">|&gt;</span></span>
+<span id="annotated-cell-2-7"><a href="#annotated-cell-2-7" aria-hidden="true" tabindex="-1"></a>  sf<span class="sc">::</span><span class="fu">st_sf</span>() <span class="ot">-&gt;</span> points_sf</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-2" data-code-lines="1" data-code-annotation="1"><code>SA1_count_shapefile</code> includes both population counts and polygon for each SA1 block.</span>
+</dd>
+<dt data-target-cell="annotated-cell-2" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-2" data-code-lines="2,3" data-code-annotation="2"><code>n_dots</code> is the number of population dots to generate per SA1 polygon, calculated as <code>floor(Person / 100)</code>. This resolution (1 dot = 100 people) is chosen because most SA1s have between 200 and 800 people, resulting in 2 to 8 dots per block. Using <code>floor()</code> ensures we only generate whole dots and prevents overcounting. To reduce computation time, we optionally apply <code>filter(n_dots &gt; 0)</code> to skip blocks with zero population.</span>
+</dd>
+<dt data-target-cell="annotated-cell-2" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-2" data-code-lines="6,7" data-code-annotation="3">Population dots are generated using <a href="https://r-spatial.github.io/sf/reference/st_sample.html"><code>st_sample()</code></a>. The result is an sf object with one row per dot and a geometry column representing point locations.</span>
+</dd>
+</dl>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>points_sf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Simple feature collection with 57470 features and 1 field
+Geometry type: POINT
+Dimension:     XY
+Bounding box:  xmin: 141.0321 ymin: -38.87474 xmax: 149.7605 ymax: -34.12203
+Geodetic CRS:  GCS_GDA2020
+# A tibble: 57,470 × 2
+     FID             geometry
+   &lt;dbl&gt;          &lt;POINT [°]&gt;
+ 1     0  (143.802 -37.55391)
+ 2     1  (143.804 -37.55111)
+ 3     2 (143.8023 -37.54956)
+ 4     3 (143.8039 -37.55215)
+ 5     4 (143.7962 -37.55324)
+ 6     5 (143.8123 -37.56792)
+ 7     6 (143.8129 -37.56038)
+ 8     7 (143.8142 -37.56515)
+ 9     8 (143.8009 -37.55428)
+10     9 (143.7993 -37.55614)
+# ℹ 57,460 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="recreate-the-plot" class="level3">
+<h3 class="anchored" data-anchor-id="recreate-the-plot">3. Recreate the plot</h3>
+<p>My data processing stage results in <a href="resources/SA1_count_shapefile/SA1_count_shapefile.shp"><code>SA1_count_shapefile</code></a> and the sampling density dots process results in <a href="resources/points_sf/points_sf.shp"><code>points_sf</code></a></p>
+<p>Below is the code to recreate the plot at the beginning of this post</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggtext)  </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> SA1_count_shapefile, <span class="at">fill =</span> <span class="st">"grey95"</span>, <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">size =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> points_sf, <span class="at">color =</span> <span class="st">"orange"</span>, <span class="at">size =</span> <span class="fl">0.3</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Population Density in Victoria"</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Each &lt;span style='color:orange'&gt;&amp;#9679;&lt;/span&gt; = 100 people"</span>,</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Source: ABS Census Data 2021"</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_markdown</span>(<span class="at">size =</span> <span class="dv">12</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">9</span>, <span class="at">hjust =</span> <span class="dv">1</span>)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>Stay tuned to know how I plot the population density dots on the map.</p>
-
-
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
