@@ -105,7 +105,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed slimcontent">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -230,19 +230,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#preparing-data" id="toc-preparing-data" class="nav-link" data-scroll-target="#preparing-data">1. Preparing data</a></li>
   <li><a href="#generating-population-dots" id="toc-generating-population-dots" class="nav-link" data-scroll-target="#generating-population-dots">2. Generating population dots</a></li>
-  <li><a href="#recreate-the-plot" id="toc-recreate-the-plot" class="nav-link" data-scroll-target="#recreate-the-plot">3. Recreate the plot</a></li>
+  <li><a href="#recreating-the-plot" id="toc-recreating-the-plot" class="nav-link" data-scroll-target="#recreating-the-plot">3. Recreating the plot</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../projects/Greater Melbourne Distribution Center Landscape/populationDensity.html">How I built this</a></li><li class="breadcrumb-item"><a href="../../projects/Greater Melbourne Distribution Center Landscape/populationDensity.html">1. Population Density Dot Plot</a></li></ol></nav>
+<div class="quarto-title">
+<p class="subtitle lead">How to Generate Population Density Dots</p>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="text-center">
 <p><img src="fig/recreation.png" class="img-fluid" style="width:70.0%"></p>
-<section id="motivation" class="level2 page-columns page-full">
+</div>
+<section id="motivation" class="level2">
 <h2 class="anchored" data-anchor-id="motivation">Motivation</h2>
 <div class="callout callout-style-default callout-note callout-titled" title="Before we start!!!">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
@@ -261,33 +279,16 @@ Before we start!!!
 </div>
 </div>
 <p>SA2-level population data is commonly used in urban planning to determine warehouse locations. However, fulfillment centers operate at the last-mile stage of the logistics chain, delivering directly to households and retail stores. Therefore, using finer-scale population data — at the SA1 or Mesh Block level — is more appropriate to determine their locations.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="fig/last-mile-delivery-service.webp" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Lazrtek (2023) https://lazrtek.com/what-is-a-last-mile-delivery-vehicle</figcaption>
-</figure>
-</div>
-</div></div><p>The yellow population dots in my report were built on SA1 level.</p>
+<p>The yellow population dots in my report were built on SA1 level.</p>
 </section>
-<section id="inspiration" class="level2 page-columns page-full">
+<section id="inspiration" class="level2">
 <h2 class="anchored" data-anchor-id="inspiration">Inspiration</h2>
-<p>My inspiration comes from the map featured in <em>Population and Housing in Regional Victoria 2020 Report</em>. As far as I know, the original was created using ArcGIS - not open-source.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="fig/inspiration.jpeg" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption><em>Population density, Victoria 2016</em>.<br>
-Department of Environment, Land, Water and Planning (2020).</figcaption>
-</figure>
-</div>
-</div></div><p>With some familiarity in R, <code>dplyr</code>, and <code>sf</code> packages — you can recreate similar dot-density plots at different statistical geography levels and resolutions, completely free of charge.</p>
+<p>My inspiration comes from the map<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> featured in <em>Population and Housing in Regional Victoria 2020 Report</em>. As far as I know, the original was created using ArcGIS - not open-source.</p>
+<p>With some familiarity in R, <code>dplyr</code>, and <code>sf</code> packages — you can recreate similar dot-density plots at different statistical geography levels and resolutions, completely free of charge.</p>
 </section>
-<section id="execution" class="level2 page-columns page-full">
+<section id="execution" class="level2">
 <h2 class="anchored" data-anchor-id="execution">Execution</h2>
-<section id="preparing-data" class="level3 page-columns page-full">
+<section id="preparing-data" class="level3">
 <h3 class="anchored" data-anchor-id="preparing-data">1. Preparing data</h3>
 <div class="callout callout-style-default callout-note callout-titled" title="Resources (to work with spatial vector data in R)">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
@@ -306,74 +307,78 @@ Resources (to work with spatial vector data in R)
 </div>
 </div>
 </div>
-<p>The Australian Bureau of Statistics (ABS) provides Population counts at the smallest level - <a href="https://www.abs.gov.au/census/guide-census-data/mesh-block-counts/latest-release#data-download">Mesh Block</a>, along with <a href="https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/allocation-files">allocation file</a> for mapping among levels, and <a href="https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/digital-boundary-files">shapefiles</a> for each level. By joining these files, we can create a shapefile with population counts at any level.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="fig/joins.webp" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption><em>4 types of JOIN</em>.<br>
-Trust-me-bro (n.d.).</figcaption>
-</figure>
+<p>This stage involves:</p>
+<ul>
+<li><p>Retrieving population data from the Australian Bureau of Statistics (ABS) and Joining it with the shapefile</p></li>
+<li><p>Choosing a resolution for the population dots (e.g., 1 dot = 100 people)</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-1"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-1-1" class="code-annotation-target"><a href="#annotated-cell-1-1" aria-hidden="true" tabindex="-1"></a>SA1_count_shapefile <span class="sc">|&gt;</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-1-2" class="code-annotation-target"><a href="#annotated-cell-1-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">n_dots =</span> <span class="fu">floor</span>(Person <span class="sc">/</span> <span class="dv">100</span>))  <span class="sc">|&gt;</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-1-3" class="code-annotation-target"><a href="#annotated-cell-1-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(n_dots <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="ot">-&gt;</span> SA_count_shapefile</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="1" data-code-annotation="1">Australian Bureau of Statistics (ABS) provides Population counts at the smallest level - <a href="https://www.abs.gov.au/census/guide-census-data/mesh-block-counts/latest-release#data-download">Mesh Block</a>, along with <a href="https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/allocation-files">allocation file</a> for mapping among levels, and <a href="https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/digital-boundary-files">shapefiles</a> for each level. By joining these files<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, a shapefile with population counts of any level can be created. <code>SA1_count_shapefile</code> includes both population counts <code>Person</code> and polygon <code>Geometry</code> for each SA1 block.</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="2" data-code-annotation="2"><code>n_dots</code> is the number of population dots to generate per SA1 polygon, calculated as <code>floor(Person / 100)</code>. This resolution (1 dot = 100 people) is chosen because most SA1s have between 200 and 800 people, resulting in 2 to 8 dots per block. Using <code>floor()</code> ensures we only generate whole dots and prevents overcounting.</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="3" data-code-annotation="3">Optionally, to reduce computation time, <code>filter(n_dots &gt; 0)</code> is to skip blocks with zero population.</span>
+</dd>
+</dl>
 </div>
-</div></div><p>Output of this stage should be an <code>sf</code> object with multipolygon geometry and population count for each polygon.</p>
+</div>
+<p>Output of this stage should be an <code>sf</code> object with polygons and number of dots for each polygon.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>SA1_count_shapefile</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Simple feature collection with 15482 features and 2 fields (with 4 geometries empty)
+<pre><code>Simple feature collection with 14987 features and 3 fields (with 1 geometry empty)
 Geometry type: MULTIPOLYGON
 Dimension:     XY
-Bounding box:  xmin: 140.9619 ymin: -39.15918 xmax: 149.9762 ymax: -33.98064
+Bounding box:  xmin: 140.9619 ymin: -38.90962 xmax: 149.9762 ymax: -33.98064
 Geodetic CRS:  GCS_GDA2020
-# A tibble: 15,482 × 3
-   SA1_COD     Person                                                   geometry
-   &lt;chr&gt;        &lt;dbl&gt;                                         &lt;MULTIPOLYGON [°]&gt;
- 1 20101100101    437 (((143.8009 -37.55382, 143.8004 -37.55376, 143.8005 -37.5…
- 2 20101100102    183 (((143.7977 -37.55071, 143.7978 -37.55075, 143.7981 -37.5…
- 3 20101100105    382 (((143.8156 -37.5587, 143.8169 -37.55885, 143.8175 -37.55…
- 4 20101100106    584 (((143.801 -37.55383, 143.8024 -37.55399, 143.8032 -37.55…
- 5 20101100107    363 (((143.8129 -37.55643, 143.813 -37.5561, 143.8132 -37.555…
- 6 20101100108    792 (((143.8089 -37.55476, 143.809 -37.55478, 143.8102 -37.55…
- 7 20101100109    528 (((143.8044 -37.55316, 143.8046 -37.55213, 143.8048 -37.5…
- 8 20101100110    512 (((143.7886 -37.54654, 143.7882 -37.54637, 143.7866 -37.5…
- 9 20101100111    371 (((143.7923 -37.54826, 143.7922 -37.54849, 143.7922 -37.5…
-10 20101100112    424 (((143.7918 -37.5514, 143.7917 -37.55106, 143.7916 -37.55…
-# ℹ 15,472 more rows</code></pre>
+# A tibble: 14,987 × 4
+   SA1_COD     Person n_dots                                            geometry
+   &lt;chr&gt;        &lt;dbl&gt;  &lt;dbl&gt;                                  &lt;MULTIPOLYGON [°]&gt;
+ 1 20101100101    437      4 (((143.8009 -37.55382, 143.8004 -37.55376, 143.800…
+ 2 20101100102    183      1 (((143.7977 -37.55071, 143.7978 -37.55075, 143.798…
+ 3 20101100105    382      3 (((143.8156 -37.5587, 143.8169 -37.55885, 143.8175…
+ 4 20101100106    584      5 (((143.801 -37.55383, 143.8024 -37.55399, 143.8032…
+ 5 20101100107    363      3 (((143.8129 -37.55643, 143.813 -37.5561, 143.8132 …
+ 6 20101100108    792      7 (((143.8089 -37.55476, 143.809 -37.55478, 143.8102…
+ 7 20101100109    528      5 (((143.8044 -37.55316, 143.8046 -37.55213, 143.804…
+ 8 20101100110    512      5 (((143.7886 -37.54654, 143.7882 -37.54637, 143.786…
+ 9 20101100111    371      3 (((143.7923 -37.54826, 143.7922 -37.54849, 143.792…
+10 20101100112    424      4 (((143.7918 -37.5514, 143.7917 -37.55106, 143.7916…
+# ℹ 14,977 more rows</code></pre>
 </div>
 </div>
 </section>
 <section id="generating-population-dots" class="level3">
 <h3 class="anchored" data-anchor-id="generating-population-dots">2. Generating population dots</h3>
-<p>Generating population dots involves</p>
-<ul>
-<li><p>Choosing a resolution (e.g., 1 dot = 100 people) and,</p></li>
-<li><p>Sampling points within each polygon.</p></li>
-</ul>
+<p>Generating population dots is the process to ramdomly sampling points within each polygon with <a href="https://r-spatial.github.io/sf/reference/st_sample.html"><code>st_sample()</code></a> from <code>sf</code> package.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="annotated-cell-2"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-2-1" class="code-annotation-target"><a href="#annotated-cell-2-1" aria-hidden="true" tabindex="-1"></a>SA1_count_shapefile <span class="sc">|&gt;</span></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-2-2" class="code-annotation-target"><a href="#annotated-cell-2-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">n_dots =</span> <span class="fu">floor</span>(Person <span class="sc">/</span> <span class="dv">100</span>))  <span class="sc">|&gt;</span></span>
-<span id="annotated-cell-2-3"><a href="#annotated-cell-2-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(n_dots <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="ot">-&gt;</span> SA_count_shapefile</span>
-<span id="annotated-cell-2-4"><a href="#annotated-cell-2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="annotated-cell-2-5"><a href="#annotated-cell-2-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-2-6" class="code-annotation-target"><a href="#annotated-cell-2-6" aria-hidden="true" tabindex="-1"></a>sf<span class="sc">::</span><span class="fu">st_sample</span>(SA1_count_shapefile, <span class="at">size =</span> SA1_count_shapefile<span class="sc">$</span>n_dots)<span class="sc">|&gt;</span></span>
-<span id="annotated-cell-2-7"><a href="#annotated-cell-2-7" aria-hidden="true" tabindex="-1"></a>  sf<span class="sc">::</span><span class="fu">st_sf</span>() <span class="ot">-&gt;</span> points_sf</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-3"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-3-1" class="code-annotation-target"><a href="#annotated-cell-3-1" aria-hidden="true" tabindex="-1"></a>sf<span class="sc">::</span><span class="fu">st_sample</span>(SA1_count_shapefile, <span class="at">size =</span> SA1_count_shapefile<span class="sc">$</span>n_dots)<span class="sc">|&gt;</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-3-2" class="code-annotation-target"><a href="#annotated-cell-3-2" aria-hidden="true" tabindex="-1"></a>  sf<span class="sc">::</span><span class="fu">st_sf</span>() <span class="ot">-&gt;</span> points_sf</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-lines="1" data-code-annotation="1"><code>SA1_count_shapefile</code> includes both population counts and polygon for each SA1 block.</span>
+<span data-code-cell="annotated-cell-3" data-code-lines="1" data-code-annotation="1"><code>st_sample</code> takes in an <code>sf</code> object with multipolygon geometry, <code>size</code> argument specifies the number of points to sample from each polygon.</span>
 </dd>
-<dt data-target-cell="annotated-cell-2" data-target-annotation="2">2</dt>
+<dt data-target-cell="annotated-cell-3" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-lines="2,3" data-code-annotation="2"><code>n_dots</code> is the number of population dots to generate per SA1 polygon, calculated as <code>floor(Person / 100)</code>. This resolution (1 dot = 100 people) is chosen because most SA1s have between 200 and 800 people, resulting in 2 to 8 dots per block. Using <code>floor()</code> ensures we only generate whole dots and prevents overcounting. To reduce computation time, we optionally apply <code>filter(n_dots &gt; 0)</code> to skip blocks with zero population.</span>
-</dd>
-<dt data-target-cell="annotated-cell-2" data-target-annotation="3">3</dt>
-<dd>
-<span data-code-cell="annotated-cell-2" data-code-lines="6,7" data-code-annotation="3">Population dots are generated using <a href="https://r-spatial.github.io/sf/reference/st_sample.html"><code>st_sample()</code></a>. The result is an sf object with one row per dot and a geometry column representing point locations.</span>
+<span data-code-cell="annotated-cell-3" data-code-lines="2" data-code-annotation="2">Result is converted from a list of points to an <code>sf</code> object with <a href="https://r-spatial.github.io/sf/reference/st_sf.html"><code>st_sf()</code></a>.</span>
 </dd>
 </dl>
 </div>
 </div>
+<p>Result should have geometry column representing point locations.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>points_sf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -399,8 +404,8 @@ Geodetic CRS:  GCS_GDA2020
 </div>
 </div>
 </section>
-<section id="recreate-the-plot" class="level3">
-<h3 class="anchored" data-anchor-id="recreate-the-plot">3. Recreate the plot</h3>
+<section id="recreating-the-plot" class="level3">
+<h3 class="anchored" data-anchor-id="recreating-the-plot">3. Recreating the plot</h3>
 <p>My data processing stage results in <a href="https://github.com/tranlevantra/personal_website/blob/main/projects/Greater%20Melbourne%20Distribution%20Center%20Landscape/resources/SA1_count_shapefile.zip"><code>SA1_count_shapefile</code></a> and the sampling density dots process results in <a href="https://github.com/tranlevantra/personal_website/blob/main/projects/Greater%20Melbourne%20Distribution%20Center%20Landscape/resources/points_sf.zip"><code>points_sf</code></a></p>
 <p>Below is the code to recreate the plot at the beginning of this post</p>
 <div class="cell">
@@ -428,7 +433,26 @@ Geodetic CRS:  GCS_GDA2020
 </section>
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fig/inspiration.jpeg" class="img-fluid figure-img" style="width:30.0%"></p>
+<figcaption><em>Population density, Victoria 2016</em>. Department of Environment, Land, Water and Planning (2020).</figcaption>
+</figure>
+</div>
+<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></li>
+<li id="fn2"><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fig/joins.webp" class="img-fluid figure-img" style="width:30.0%"></p>
+<figcaption><em>4 types of JOIN</em>. Trust-me-bro (n.d.).</figcaption>
+</figure>
+</div>
+<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

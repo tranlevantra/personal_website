@@ -1,12 +1,9 @@
 ---
+subtitle: "How to Generate Population Density Dots"
 format:
   html:
     toc: true
     toc-depth: 3
-    grid: 
-      margin-width: 200px
-    citation-location: margin
-    reference-location: margin
 ---
 ```{r include=FALSE}
 library(tidyverse)
@@ -21,8 +18,9 @@ points_sf <- read_sf("resources/points_sf/points_sf.shp")
 footnote_table <- knitr::kable(head(SA1_count_shapefile), format = "markdown")
 
 ```
-
+::: {.text-center}
 ![](fig/recreation.png){width="70%"}
+:::
 
 
 
@@ -36,9 +34,6 @@ Let's skim through this [blog post](https://tranlevantra.github.io/personal_webs
 
 SA2-level population data is commonly used in urban planning to determine warehouse locations. However, fulfillment centers operate at the last-mile stage of the logistics chain, delivering directly to households and retail stores. Therefore, using finer-scale population data — at the SA1 or Mesh Block level — is more appropriate to determine their locations.
 
-::: {.column-margin}
-![Lazrtek (2023) https://lazrtek.com/what-is-a-last-mile-delivery-vehicle](fig/last-mile-delivery-service.webp){width="70%"}
-:::
 
 The yellow population dots in my report were built on SA1 level.
 
@@ -49,12 +44,11 @@ The yellow population dots in my report were built on SA1 level.
 
 
 
-My inspiration comes from the map featured in *Population and Housing in Regional Victoria 2020 Report*. As far as I know, the original was created using ArcGIS - not open-source.
+My inspiration comes from the map[^1] featured in *Population and Housing in Regional Victoria 2020 Report*. As far as I know, the original was created using ArcGIS - not open-source.
 
-::: {.column-margin}
-![*Population density, Victoria 2016*.  
-Department of Environment, Land, Water and Planning (2020).](fig/inspiration.jpeg){width="100%"}
-:::
+
+[^1]: ![*Population density, Victoria 2016*.
+Department of Environment, Land, Water and Planning (2020).](fig/inspiration.jpeg){width="30%"}
 
 With some familiarity in R, `dplyr`, and `sf` packages — you can recreate similar dot-density plots at different statistical geography levels and resolutions, completely free of charge.
 
@@ -73,15 +67,35 @@ Working with tabular data using `dplyr` package is straightforward, `|>` pipe op
 An `sf` object from `sf` package extends regular tabular data frames to include a geometry column, which contains the spatial information. Thus, a simple explanation on [how to read shapefiles](https://r-graph-gallery.com/168-load-a-shape-file-into-r.html) with `sf` should be enough to get you started. Then, those mentioned `dplyr` functions will come in handy.
 :::
 
+This stage involves:
 
-The Australian Bureau of Statistics (ABS) provides Population counts at the smallest level - [Mesh Block](https://www.abs.gov.au/census/guide-census-data/mesh-block-counts/latest-release#data-download), along with [allocation file](https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/allocation-files) for mapping among levels, and [shapefiles](https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/digital-boundary-files) for each level. By joining these files, we can create a shapefile with population counts at any level.
+- Retrieving population data from the Australian Bureau of Statistics (ABS) and Joining it with the shapefile
 
-::: {.column-margin}
-![*4 types of JOIN*.  
-Trust-me-bro (n.d.).](fig/joins.webp){width="100%"}
-:::
+- Choosing a resolution for the population dots (e.g., 1 dot = 100 people)
 
-Output of this stage should be an `sf` object with multipolygon geometry and population count for each polygon.
+```{r}
+#| echo: true
+#| eval: false
+
+SA1_count_shapefile |>                          # <1>
+  dplyr::mutate(n_dots = floor(Person / 100))  |>      # <2>
+  dplyr::filter(n_dots > 0) -> SA_count_shapefile     # <3>
+
+```
+
+
+1. Australian Bureau of Statistics (ABS) provides Population counts at the smallest level - [Mesh Block](https://www.abs.gov.au/census/guide-census-data/mesh-block-counts/latest-release#data-download), along with [allocation file](https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/allocation-files) for mapping among levels, and [shapefiles](https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/digital-boundary-files) for each level. By joining these files[^2], a shapefile with population counts of any level can be created. `SA1_count_shapefile` includes both population counts `Person` and polygon `Geometry` for each SA1 block.
+
+2. `n_dots` is the number of population dots to generate per SA1 polygon, calculated as `floor(Person / 100)`. This resolution (1 dot = 100 people) is chosen because most SA1s have between 200 and 800 people, resulting in 2 to 8 dots per block. Using `floor()` ensures we only generate whole dots and prevents overcounting. 
+
+3. Optionally, to reduce computation time, `filter(n_dots > 0)` is to skip blocks with zero population.
+
+[^2]: ![*4 types of JOIN*.
+Trust-me-bro (n.d.).](fig/joins.webp){width="30%"}
+
+
+
+Output of this stage should be an `sf` object with polygons and number of dots for each polygon.
 
 ```{r}
 #| code-fold: false
@@ -93,33 +107,26 @@ SA1_count_shapefile
 
 ### 2. Generating population dots
 
-Generating population dots involves 
-
-- Choosing a resolution (e.g., 1 dot = 100 people) and,
-
-- Sampling points within each polygon. 
+Generating population dots is the process to ramdomly sampling points within each polygon with [`st_sample()`](https://r-spatial.github.io/sf/reference/st_sample.html) from `sf` package.
 
 
 ```{r}
 #| echo: true
 #| eval: false
 
-SA1_count_shapefile |>                          # <1>
-  dplyr::mutate(n_dots = floor(Person / 100))  |>      # <2>
-  dplyr::filter(n_dots > 0) -> SA_count_shapefile     # <2>
-
-  
-sf::st_sample(SA1_count_shapefile, size = SA1_count_shapefile$n_dots)|>  # <3>
-  sf::st_sf() -> points_sf  # <3>
+sf::st_sample(SA1_count_shapefile, size = SA1_count_shapefile$n_dots)|>  # <1>
+  sf::st_sf() -> points_sf  # <2>
 
 ```
 
 
-1. `SA1_count_shapefile` includes both population counts and polygon for each SA1 block.
+1. `st_sample` takes in an `sf` object with multipolygon geometry, `size` argument specifies the number of points to sample from each polygon.
 
-2. `n_dots` is the number of population dots to generate per SA1 polygon, calculated as `floor(Person / 100)`. This resolution (1 dot = 100 people) is chosen because most SA1s have between 200 and 800 people, resulting in 2 to 8 dots per block. Using `floor()` ensures we only generate whole dots and prevents overcounting. To reduce computation time, we optionally apply `filter(n_dots > 0)` to skip blocks with zero population.
+2. Result is converted from a list of points to an `sf` object with [`st_sf()`](https://r-spatial.github.io/sf/reference/st_sf.html). 
 
-3. Population dots are generated using [`st_sample()`](https://r-spatial.github.io/sf/reference/st_sample.html). The result is an sf object with one row per dot and a geometry column representing point locations.
+
+Result should have geometry column representing point locations.
+
 
 
 ```{r}
@@ -127,7 +134,7 @@ sf::st_sample(SA1_count_shapefile, size = SA1_count_shapefile$n_dots)|>  # <3>
 points_sf
 ```
 
-### 3. Recreate the plot
+### 3. Recreating the plot
 
 My data processing stage results in [`SA1_count_shapefile`](https://github.com/tranlevantra/personal_website/blob/main/projects/Greater%20Melbourne%20Distribution%20Center%20Landscape/resources/SA1_count_shapefile.zip) and the sampling density dots process results in [`points_sf`](https://github.com/tranlevantra/personal_website/blob/main/projects/Greater%20Melbourne%20Distribution%20Center%20Landscape/resources/points_sf.zip)
 

@@ -4,3 +4,4 @@ format:
   html:
     toc: true
     toc-location: right
+    margin-width: 50px

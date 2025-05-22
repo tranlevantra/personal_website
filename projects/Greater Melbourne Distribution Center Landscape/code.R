@@ -115,3 +115,8 @@ st_sample(SA1_count_shapefile, size = SA1_count_shapefile$n_dots) -> points_sf
 st_sample(SA1_count_shapefile[1:10,], size = SA1_count_shapefile$n_dots[1:10]) -> points_sf
 
 points_sf |> st_sf()
+
+
+#save SA1_count_shapefile
+SA1_count_shapefile |> 
+  st_write("projects/Greater Melbourne Distribution Center Landscape/resources/SA1_count_shapefile.shp")

@@ -25,7 +25,7 @@ Fulfillment centers are specialised warehouses that **store finished products** 
 
 ### 2. Key Characteristics of Fulfillment Centers
 
-- *Strategic location*: Often near transport hubs and densely populated areas to ensure fast, efficient delivery to end customers.
+-   *Strategic location*: Often near transport hubs and densely populated areas to ensure fast, efficient delivery to end customers.
 
 -   *High scalability*: Designed to handle large, fluctuating volumes of small-parcel, multi-item orders shipped to geographically dispersed destinations. Advanced technology and automation are often required to maintain speed and accuracy.
 
